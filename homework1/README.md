@@ -45,7 +45,7 @@ source <name_of_virtual_environment>/bin/activate
 
 #### 2) Install pytest, pandas, and matplotlib.
 ```
-python3 -m pip install pytest, pandas, matplotlib
+python3 -m pip install pytest pandas matplotlib
 ```
 
 #### 3) Clone the repository to /home/student
@@ -53,7 +53,7 @@ python3 -m pip install pytest, pandas, matplotlib
 cd /home/student
 git clone git@github.com:lkarsanb/cs4300.git 
 ```
-Now, you should see a directory /home/student/cs4300.
+
 
 #### 4) cd into the new directory.
 ```
