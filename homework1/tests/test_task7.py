@@ -11,4 +11,4 @@ def test_check_data():
 
 def test_chart_generated():
     """ Test if the file was the chart was created. """
-    assert os.path.exists("bar_chart.jpg")
+    assert os.path.exists("/home/student/cs4300/homework1/bar_chart.jpg")

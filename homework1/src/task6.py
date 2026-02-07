@@ -3,8 +3,7 @@ import re, os
 def count_words(file):
     """ Given an input file, return the number of words in the file, including punctuation."""
     # Check if file exists and is a file.
-    full_path = os.path.join(".", file)
-    if not os.path.exists(full_path) or not os.path.isfile(full_path):
+    if not os.path.exists(file) or not os.path.isfile(file):
         raise FileNotFoundError(f"No such file exists.")
 
     count = 0
@@ -19,8 +18,7 @@ def count_words(file):
 def count_words_no_punct(file):
     """ Given an input file, return the number of words in the file, not including punctuation. """
     # Check if file exists and is a file.
-    full_path = os.path.join(".", file)
-    if not os.path.exists(full_path) or not os.path.isfile(full_path):
+    if not os.path.exists(file) or not os.path.isfile(file):
         raise FileNotFoundError(f"No such file exists.")
 
     with open(file, 'r') as f:
