@@ -1,9 +1,9 @@
 ## Homework 1
 
-#### Overview of Project
+### Overview of Project
 In this project, I was able to interact with Python and write tests for each file I created. This project explores basic Python syntax, datatypes, and control structures as well as more advanced topics such as implementing an algorihtm, using file handing, and implementing tests to check the code.
 
-#### Project Structure
+### Project Structure
 ```text
 .
 ├── bar_chart.jpg
@@ -33,4 +33,11 @@ In this project, I was able to interact with Python and write tests for each fil
         └── test_task7.py
 
 6 directories, 21 files
+
+
+### How to Run
+## How to Run Code
+'''
+cd env
+'''
 
