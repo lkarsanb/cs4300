@@ -33,7 +33,7 @@ In this project, I was able to interact with Python and write tests for each fil
         └── test_task7.py
 
 6 directories, 21 files
-
+```
 
 ### How to Run
 ## How to Run Code
