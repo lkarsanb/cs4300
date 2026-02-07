@@ -4,7 +4,7 @@
 In this project, I was able to interact with Python and write tests for each file I created. This project explores basic Python syntax, datatypes, and control structures as well as more advanced topics such as implementing an algorihtm, using file handing, and implementing tests to check the code.
 
 #### Project Structure
-'''text
+```text
 .
 ├── bar_chart.jpg
 └── homework1
