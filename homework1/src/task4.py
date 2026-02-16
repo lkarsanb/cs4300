@@ -1,4 +1,4 @@
-from decimal import Decimal, ROUND_HALF_UP
+from decimal import Decimal, ROUND_HALF_UP, InvalidOperation
 
 def calculate_discount(price, discount):
     """
@@ -12,17 +12,26 @@ def calculate_discount(price, discount):
         rounded_value (str): A string of the price of the product after applying the discount in the format of #.##.
     """
 
-    if not isinstance(price, (int, float)):
-        raise TypeError(f"Expected an int or float for price, recieved a {type(price).__name__}")
-    if not isinstance(discount, (int, float)):
-        raise TypeError(f"Expected an int or float for discount, recieved a {type(discount).__name__}")
+    # if not isinstance(price, (int, float)):
+    #     raise TypeError(f"Expected an int or float for price, recieved a {type(price).__name__}")
+    # if not isinstance(discount, (int, float)):
+    #     raise TypeError(f"Expected an int or float for discount, recieved a {type(discount).__name__}")
+    # if discount < 0 or discount > 100:
+    #     raise ValueError(f"Expected discount to be in range 0 to 100.")
+    
     if discount < 0 or discount > 100:
-        raise ValueError(f"Expected discount to be in range 0 to 100.")
+        raise ValueError (f"Discount value must be between 0 and 100.")
+    try:
+
+        d_price = Decimal(price)
+        d_discount = Decimal(discount)
+        value = d_price - (Decimal(price) * Decimal(d_discount) / 100)
+
+        # Properly round up with format of #.##5
+        rounded_value = value.quantize(Decimal("0.00"), rounding=ROUND_HALF_UP)
+        return f"{rounded_value}"
     
-    d_price = Decimal(price)
-    d_discount = Decimal(discount)
-    value = d_price - (Decimal(price) * Decimal(d_discount) / 100)
-    
-    # Properly round up with format of #.##5
-    rounded_value = value.quantize(Decimal("0.00"), rounding=ROUND_HALF_UP)
-    return f"{rounded_value}"
+    except InvalidOperation:
+        raise InvalidOperation (f"Expected an int or float for price, recieved a {type(price).__name__}.")
+    except TypeError:
+        raise TypeError (f"Expected an int or float for discount, recieved a {type(discount).__name__}.")

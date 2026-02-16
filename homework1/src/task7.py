@@ -1,6 +1,7 @@
 # Chosen package: pandas and matplotlib
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
 
 # Create data
 students = {
@@ -25,4 +26,6 @@ plt.bar(table["student"], table["grade"])
 plt.title("Student Grades")
 plt.xlabel("Students")
 plt.ylabel("Grades (percentage)")
-plt.savefig("/home/student/cs4300/homework1/bar_chart.jpg")
+curr_loc = os.path.dirname(__file__)
+full_path = os.path.join(curr_loc, "../bar_chart.jpg")
+plt.savefig(full_path)

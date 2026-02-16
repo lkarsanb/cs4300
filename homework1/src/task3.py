@@ -20,10 +20,14 @@ def n_primes(n):
     Returns:
         prime_vals (list): A list containing the first n prime numbers.
     """
-    # As a boundary, make limit of largest prime number to find 5003.
-    max = 5003
+    # Check if n is positive. If not, return error.
+    if is_positive(n) != "positive":
+        raise ValueError(f"Expected positive, non-zero number.")
 
-    is_prime = [True] * (max + 1)
+    # As a boundary, make limit of largest prime number to find 5003.
+    max_prime = 5003
+
+    is_prime = [True] * (max_prime + 1)
 
     # 0 and 1 are not prime, so initialize with False.
     is_prime[0] = False
@@ -36,11 +40,11 @@ def n_primes(n):
     prime_vals = []
 
     # 1 is not prime, so start iteration from i = 2 up to max.
-    for i in range(2, max + 1):
+    for i in range(2, max_prime + 1):
         if is_prime[i]:
             num_primes += 1
             prime_vals.append(i)
-            for multiple in range(i * i, max + 1, i):
+            for multiple in range(i * i, max_prime + 1, i):
                 # Mark all multiples as not prime.
                 is_prime[multiple] = False
         
@@ -60,6 +64,9 @@ def sum_to_n(n):
     Returns:
         sum (int): The sum of values added.
     """
+    # Check if n is positive. If not, return error.
+    if is_positive(n) == "negative":
+        raise ValueError(f"Expected positive number.")
 
     counter = 1
     sum = 0
@@ -68,3 +75,5 @@ def sum_to_n(n):
         counter += 1
 
     return sum
+
+print(sum_to_n(2.2))

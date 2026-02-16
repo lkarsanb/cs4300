@@ -7,6 +7,12 @@ def test_integer(value):
     assert isinstance(value, int)
 
 
+@pytest.mark.parametrize("value", [task2.int_sum])
+def test_sum(value):
+    """ Tests if the two integers results in an integer."""
+    assert value == 4
+
+
 @pytest.mark.parametrize("f_val", [task2.float1, task2.float2])
 def test_float(f_val):
     """ Tests to check if value is a float. """
@@ -17,6 +23,12 @@ def test_float(f_val):
 def test_string(s_val):
     """ Tests to check if value is a string. """
     assert isinstance(s_val, str)
+
+
+@pytest.mark.parametrize("result", [task2.concat_str])
+def test_concatenation(result):
+    """ Tests if the two strings concatente correctly."""
+    assert result == "Hello, world!"
 
 
 @pytest.mark.parametrize("b_val", [task2.bool1, task2.bool2])
