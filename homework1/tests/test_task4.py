@@ -13,21 +13,21 @@ def test_calculate_discount(price, discount, value):
 
 
 @pytest.mark.parametrize("price, discount", [("abc", 100), ("!123", 5)])
-def test_calc_discount_invalid_operation(price, discount):
+def test_calculate_discount_invalid_operation(price, discount):
     """ Tests calculate_discount if discount value is not between 0 and 100. """
     with pytest.raises(InvalidOperation):
         task4.calculate_discount(price, discount)
 
 
-@pytest.mark.parametrize("price, discount", [(100, "abc"), (50, "-1")])
-def test_calc_discount_type_error(price, discount):
+@pytest.mark.parametrize("price, discount", [(100, "abc"), (50, "-1"), ("hi", "hi"), ("100", "hi")])
+def test_calculate_discount_type_error(price, discount):
     """ Tests calculate_discount if strings are given for either price. """
     with pytest.raises(TypeError):
         task4.calculate_discount(price, discount)
 
 
 @pytest.mark.parametrize("price, discount", [(100, 101), (100, -1),("Hi", -1)])
-def test_calc_discount_value_error(price, discount):
+def test_calculate_discount_value_error(price, discount):
     """ Tests calculate_discount if strings are given for either price. """
     with pytest.raises(ValueError):
         task4.calculate_discount(price, discount)

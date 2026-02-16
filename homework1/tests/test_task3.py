@@ -2,7 +2,7 @@ import pytest
 from src import task3
 
 @pytest.mark.parametrize("value, result", [(-1, "negative"), (100, "positive"), (-1.1, "negative"), (0, "zero"), (1, "positive"), (-100, "negative"), (5.6, "positive")])
-def test_positive(value, result):
+def test_is_positive(value, result):
     """ Tests function that returns whether value is positive, negative, or zero. """
     assert task3.is_positive(value) == result
 
