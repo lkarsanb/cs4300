@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-5ly(++#b=c-fk8x7pffw)83a4qh@7o$ekp#)o*n%jud4)==^)5
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    ".devedu.io",
+    "app-lkarsanb-21.devedu.io",
 ]
 
 
@@ -39,6 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    'rest_framework',
+
+    # My apps
+    'bookings',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +55,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CSRF_TRUSTED_ORIGINS = ["https://app-lkarsanb-21.devedu.io", ]
 
 ROOT_URLCONF = 'movie_theater_booking.urls'
 

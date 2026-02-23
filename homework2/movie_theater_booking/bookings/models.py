@@ -10,9 +10,10 @@ class Movie(models.Model):
     Class for a movie model. Creates initial attributes including title, description, release date, and duration.
     """
     title = models.CharField(max_length=255)
-    description = models.CharField(max_length=500)
+    description = models.TextField(max_length=750)
     release_date = models.DateField()
-    duration = models.PositiveIntegerField()
+    duration = models.PositiveIntegerField(help_text="Duration in minutes")
+    image = models.ImageField(upload_to='movie_covers/')
 
     def __str__(self):
         """Create human readable version of information."""
