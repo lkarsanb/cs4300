@@ -1,33 +1,42 @@
 from rest_framework import serializers
-from .models import Movie, Seat, Booking
+from bookings.models import Movie, Seat, Booking
 
 
-class MovieSerializer(serializers.Serializer):
+class MovieSerializer(serializers.ModelSerializer):
+    """
+    Create a Movie Serailizer using the Model Serializer class.
+    """
     class Meta:
         model = Movie
-        fields = (
+        fields = [
             'title',
             'description',
             'release_date',
             'duration'
-        )
+        ]
 
-class SeatSerializer(serializers.Serializer):
+class SeatSerializer(serializers.ModelSerializer):
+    """
+    Create a Seat Serailizer using the Model Serializer class.
+    """
     class Meta:
         model = Seat
-        fields = (
+        fields = [
             'seat_row',
             'seat_col',
             'is_booked'
-        )
+        ]
 
 
-class BookingSerializer(serializers.Serializer):
+class BookingSerializer(serializers.ModelSerializer):
+    """
+    Create a Booking Serailizer using the Model Serializer class.
+    """
     class Meta:
         model = Booking
-        fields = (
+        fields = [
             'movie',
             'seat',
-            'users',
+            'user',
             'booking_date'
-        )
+        ]
