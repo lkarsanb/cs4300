@@ -1,0 +1,56 @@
+{% extends "bookings/base.html" %}
+{% block title %} Your Booking History {% endblock %}
+
+{% block content %}
+
+<!-- Get current time to use to determine if delete booking should be available. -->
+{% load tz %}
+{% now "YmdHi" as curr_time %}
+{% if user.is_authenticated %}
+    {% if bookings %}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Movie</th>
+                    <th>Seat</th>
+                    <th>Date of Movie</th>
+                    <th>Date Booked</th>
+                    <th>Delete Booking</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for booking in bookings %}
+                    <tr>
+                        <td>{{ booking.movie }}</td>
+                        <td>Theater {{ booking.seat.movie_location }}: Seat {{ booking.seat.seat_row}}{{ booking.seat.seat_col }}</td>
+                        <td>Day: {{ booking.seat.movie_time }}</td>
+                        <td>{{ booking.booking_date|date:"F j, Y" }}</td>
+                        <td>
+
+                        <!-- If the booking has not already passed, can cancel it.  -->
+                        {% if booking.seat.movie_time|date:"YmdHi" > curr_time %}
+                            <form action="{% url 'cancel_booking' booking.id %}">
+                                {% csrf_token %}
+                                <button class="btn btn-sm btn-danger m-2" type="submit"
+                                        onclick="return confirm('Are you sure you would like to delete this booking?');">
+                                        Cancel Booking
+                                </button>
+                            </form>
+                        {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>You have no previous bookings.</p>
+    {% endif %}
+
+{% else %}
+
+    <!-- User must be logged in to view bookings. -->
+    <div class="alert alert-warning">
+        Please <a href="{% url 'login' %}">log in</a> to view your booking history.
+    </div>
+{% endif %}
+{% endblock %}

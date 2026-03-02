@@ -1,0 +1,61 @@
+{% extends "bookings/base.html" %}
+{% block title %} Seat Booking {% endblock %}
+
+{% block content %}
+
+<!-- Show if the movie is sold out. -->
+{% if is_sold_out %}
+    <h1 class="text-danger text-center mt-5">SOLD OUT</h1>
+{% endif %}
+
+
+{% if seats %}
+    <div class="container text-center mt-5">
+        <div class="screen bg-secondary text-white p-2 mb-5 rounded">SCREEN THIS WAY</div>
+            {% for seat in seats %}
+
+                <!-- If row symbol has changed, then create a new row. -->
+                {% ifchanged seat.seat_row%}
+
+                    <!-- Close the previous div row. -->
+                    {% if not forloop.first %}
+                        </div>
+                    {% endif %}
+                    <div class="d-flex justify-content-center mb-2">
+                {% endifchanged %}
+
+                {% if seat.is_booked %}
+                        <button class="btn btn-danger disabled m-2"
+                                style="min-width: 60px; min-height: 60px;">
+                                {{ seat.seat_row }}{{ seat.seat_col }}
+                        </button>
+                {% else %}
+                        <form action="{% url 'book_selected_seat' movie.id seat.id %}" method="POST">
+                        {% csrf_token %}
+                            <button class="btn btn-outline-success m-2"
+                                    style="min-width: 60px; min-height: 60px; border: 3px solid; display: flex; align-items: center; justify-content: center;">
+                                    {{ seat.seat_row }}{{ seat.seat_col }}
+                           </button>
+                        </form>
+                {% endif %}
+
+
+                <!-- Close the previous div. -->
+                {% if forloop.last %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+
+
+        <!-- Show what the color mean for clearer interface. -->
+        <div class="mt-5">
+            <span class="badge bg-success">Available</span>
+            <span class="badge bg-danger ms-2">Booked</span>
+        </div>
+    </div>
+
+{% else %}
+    <h1>No Seats</h1>
+{% endif %}
+
+{% endblock %}

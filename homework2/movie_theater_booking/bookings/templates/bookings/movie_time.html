@@ -1,0 +1,49 @@
+{% extends "bookings/base.html" %}
+{% block title %} {{ movie.title }} {% endblock %}
+
+{% block content %}
+<h1 class="text-center pt-3 pb-5">{{ movie.title }}</h1>
+
+
+<!-- Create card with information about the movie using bootstrap. -->
+<div class="card mb-3 mx-auto border-0">
+    <div class="row g-0 justify-content-center">
+        <div class="col-md-4">
+            <img src="{{ movie.image.url }}"
+                 class="img-fluid rounded-start px-4"
+                 alt="{{ movie.title }} Movie Poster"
+                 style="max-height: 650px; object-fit: cover;">
+        </div>
+
+
+        <!-- Have a description about the movie and the duration. -->
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-text">Movie Description</h5>
+                <p class="card-text">{{ movie.description }}</p>
+                <p class="card-text"><small class="text-body-secondary">Duration: {{ movie.duration }} minutes</small></p>
+            </div>
+            <br>
+
+
+            <!-- Provide the dates and have dropdowns with the times. -->
+            <h5 class="px-3">Showtimes</h5>
+            {% if dates %}
+                {% for movie_date, movie_times in dates.items %}
+                    <div class="btn-group px-3 pb-2">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ movie_date|date:"M d, Y" }}
+                        </button>
+                        <ul class="dropdown-menu">
+                        {% for t in movie_times %}
+                            <li><a class="dropdown-item" href="{% url 'seat_booking' movie.id %}?show_time={{ t|time:'H:i:s' }}&show_date={{ movie_date|date:'Y-m-d' }}">{{ t|time:"H:i" }}</a></li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
