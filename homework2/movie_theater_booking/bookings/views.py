@@ -82,11 +82,14 @@ def seat_booking_html(request, movie_id):
 
     # If the time and date are not null, convert to datetime and filter seats based on the movie, time, and date.
     if show_time and show_date:
-        showing_time = datetime.strptime(show_time, "%H:%M:%S").time()
-        showing_date = datetime.strptime(show_date, "%Y-%m-%d").date()
-        seats = Seat.objects.filter(movie=movie, movie_time__time=showing_time, movie_time__date=showing_date)
+        try:
+            showing_time = datetime.strptime(show_time, "%H:%M:%S").time()
+            showing_date = datetime.strptime(show_date, "%Y-%m-%d").date()
+            seats = Seat.objects.filter(movie=movie, movie_time__time=showing_time, movie_time__date=showing_date)
+        except ValueError:
+            seats = Seat.objects.none()
     else:
-        seats = []
+        seats = Seat.objects.none()
 
     # A boolean to keep track of which movies are sold out.
     is_sold_out = not seats.filter(is_booked=False).exists()
@@ -135,7 +138,7 @@ def cancel_booking_html(request, booking_id):
     :param booking_id: The id of the booking.
     :return: Deletes the booking and reloads bookings page.
     """
-    booking = get_object_or_404(Booking, id=booking_id)
+    booking = get_object_or_404(Booking, id=booking_id, user=request.user)
 
     # Make seat available again.
     booking.seat.is_booked = False

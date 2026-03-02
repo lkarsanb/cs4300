@@ -1,6 +1,7 @@
 from django.contrib import admin, messages
 from .models import Movie, Seat, Booking
-# Register your models here.
+from .models import SEAT_ROWS, SEAT_COLS
+
 
 admin.site.register(Movie)
 admin.site.register(Booking)
@@ -17,13 +18,9 @@ class SeatAdmin(admin.ModelAdmin):
         :param request: HTTP request that represents the current request.
         :param queryset: The seat objects selected for the action to perform on.
         """
-
-        seat_rows = ["A", "B", "C", "D", "E", "F"]
-        seat_cols = [1, 2, 3, 4, 5, 6]
-
         for seat_obj in queryset:
-            for row in seat_rows:
-                for col in seat_cols:
+            for row in SEAT_ROWS:
+                for col in SEAT_COLS:
                     # User get_or_create to prevent duplicates if admin selects option more than once.
                     Seat.objects.get_or_create(
                         movie=seat_obj.movie,

@@ -6,6 +6,10 @@ from django.db.models import UniqueConstraint
 # Get user to be used for booking model.
 User = get_user_model()
 
+# Define variables to later clean data for valid rows and columns.
+SEAT_ROWS = ["A", "B", "C", "D", "E", "F"]
+SEAT_COLS = [1, 2, 3, 4, 5, 6]
+
 # Create your models here.
 class Movie(models.Model):
     """
@@ -47,16 +51,15 @@ class Seat(models.Model):
         ]
 
     def clean(self):
-        # # Find any movies that start while movie is playing in theater, excluding current movie.
-        # overlap = Seat.objects.filter(movie_time__lt=self.movie_time, movie_location=self.movie_location)
-        # overlap = overlap.exclude(pk=self.pk)
-        # if overlap:
-        #     raise ValidationError(f"A movie is already playing at Theater {self.movie_location} at this time {end_time}.")
-
+        # Ensure that no movies are playing before their release date.
         if self.movie_time.date() < self.movie.release_date:
             raise ValidationError(f"{self.movie} is not released until {self.movie.release_date}")
 
-
+        # Ensure valid rows and columns are entered.
+        if self.seat_row.upper() not in SEAT_ROWS:
+            raise ValidationError(f"{self.seat_row} is not a valid seat row. Please select row between {SEAT_ROWS[0]} and {SEAT_ROWS[-1]}")
+        if self.seat_col not in SEAT_COLS:
+            raise ValidationError(f"{self.seat_col} is not a valid seat column. Please select column between {SEAT_COLS[0]} and {SEAT_COLS[-1]}")
 
     def __str__(self):
         """Create human readable version of information."""
