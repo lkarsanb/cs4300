@@ -143,6 +143,11 @@ python manage.py test
 coverage run --source='.' manage.py test bookings
 ```
 
+#### To see the coverage report, run:
+```
+coverage report
+```
+
 ### For behavior driven tests:
 #### Ensure you are in the directory where manage.py is located. Run the following command.
 ```
