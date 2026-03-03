@@ -68,9 +68,11 @@ def movie_time_html(request, movie_id):
         if show_date not in dates:
             dates[show_date] = set()
         dates[show_date].add(show_time)
+
     # Sort the times from earlier to later.
-    for time in dates:
-        dates[time] = sorted(dates[time])
+    for date in dates:
+        dates[date] = sorted(dates[date])
+    sort_dates = dict(sorted(dates.items()))
 
     return render(request, "bookings/movie_time.html", {"movie": movie, "dates": dates})
 
