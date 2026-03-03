@@ -168,3 +168,6 @@ Artificial Intelligence (AI) was used in this project in various aspects. ChatGP
 In addition to this, the logo that is used on the webpage was created by Gemini.
 
 The pictures that are used in the website are provided by The Movie Database (https://www.themoviedb.org/?language=en-US).
+
+## Note of DEBUG = True in Production Environment
+I wanted to try to add images to the website for a better UX. However, I was unaware that Render does not store images for free and requires a paid plan until deployment. I considered the tradeoffs such as changing the images to static but did not think that this was a good design choice due the loss of flexibility and because the information is meant to be uploaded by an admin, so this should not be considered static data which is why I did not make it static from the start. I also considered removing the images, but did not think that this would allow for a good UX and thought that it would be a fun element to implement and learn more about. I also looked into using URLs but saw that this would require persistant storage which would also be a problem with deployment on Render. While it is not a perfect solution, I decided to leave DEBUG as True to keep the images and overall flexibility of the program without changing the underlying structure of the project.
