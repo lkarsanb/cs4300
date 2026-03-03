@@ -13,11 +13,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', default='django-insecure-5ly(++#b=c-fk8x7pffw)83a4qh@7o$ekp#)o*n%jud4)==^)5')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-# DEBUG = "RENDER" not in os.environ
+DEBUG = "RENDER" not in os.environ
 
-ALLOWED_HOSTS = ['*']
-# ALLOWED_HOSTS = ["app-lkarsanb-21.devedu.io", "cs4300-movie-booking-9hci.onrender.com",]
+ALLOWED_HOSTS = ["app-lkarsanb-21.devedu.io", "cs4300-movie-booking-9hci.onrender.com",]
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
