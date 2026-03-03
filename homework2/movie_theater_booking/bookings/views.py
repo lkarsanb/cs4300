@@ -86,7 +86,7 @@ def seat_booking_html(request, movie_id):
         try:
             showing_time = datetime.strptime(show_time, "%H:%M:%S").time()
             showing_date = datetime.strptime(show_date, "%Y-%m-%d").date()
-            seats = Seat.objects.filter(movie=movie, movie_time__time=showing_time, movie_time__date=showing_date)
+            seats = Seat.objects.filter(movie=movie, movie_time__time=showing_time, movie_time__date=showing_date).order_by("seat_row", "seast_col")
         except ValueError:
             seats = Seat.objects.none()
     else:
