@@ -149,10 +149,18 @@ coverage report
 ```
 
 ### For behavior driven tests:
-#### Ensure you are in the directory where manage.py is located. Run the following command.
+#### Ensure you are in the directory where manage.py is located. If DEBUG = False in settings.py, since there are static files in this project, the following commands must be run.
+```
+python manage.py collectstatic --noinput
+python manage.py behave <optional path to certain .feature file>
+```
+
+#### If DEBUG = True, then only the following command must be run:
+lowing commands must be run.
 ```
 python manage.py behave <optional path to certain .feature file>
 ```
+
 
 ## AI Usage
 Artificial Intelligence (AI) was used in this project in various aspects. ChatGPT was used to help plan how to work on the project as well as with understanding how the backend of the application should work. From there, I was able to refer to the documentation to better see how to implement the concepts. ChatGPT was also used for testing and to help identify any missing edge cases as well as to help debug.
