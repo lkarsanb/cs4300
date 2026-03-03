@@ -76,12 +76,13 @@ WSGI_APPLICATION = 'movie_theater_booking.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
- 
-DATABASES = {
-    'default': dj_database_url.config(
-        default=os.environ.get("DATABASE_URL"),
-        conn_max_age=600, )
-}
+
+if not DEBUG: 
+    DATABASES = {
+        'default': dj_database_url.config(
+            default=os.environ.get("DATABASE_URL"),
+            conn_max_age=600, )
+    }
 
 # else:
 #     DATABASES = {
