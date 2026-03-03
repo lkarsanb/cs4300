@@ -135,6 +135,6 @@ python manage.py behave <optional path to certain .feature file>
 ## AI Usage
 Artificial Intelligence (AI) was used in this project in various aspects. ChatGPT was used to help plan how to work on the project as well as with understanding how the backend of the application should work. From there, I was able to refer to the documentation to better see how to implement the concepts. ChatGPT was also used for testing and to help identify any missing edge cases as well as to help debug.
 
-In addition to this, the logo that was generated was created by Gemini.
+In addition to this, the logo that is used on the webpage was created by Gemini.
 
 The pictures that are used in the website are provided by The Movie Database (https://www.themoviedb.org/?language=en-US).
