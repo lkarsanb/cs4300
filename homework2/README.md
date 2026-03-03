@@ -1,4 +1,4 @@
-# Homework 1
+# Homework 2
 
 ### Overview of Project
 In this project, I was able to interact with Python, Django, Django REST Framework, Bootstrap, and render to create a movie booking website. Users are able to view movies that are playing, book seats, and view previous bookings.
