@@ -119,7 +119,7 @@ python manage.py runserver
 
 
 ## Deployment on Render
-Render is used to deploy this project as ``` https://cs4300-movie-booking-9hci.onrender.com/ ```.
+Render is used to deploy this project as https://cs4300-movie-booking-9hci.onrender.com/
 
 ## Testing 
 This project was tested with unit tests, integration tests, and behavior driven tests.
