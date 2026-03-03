@@ -73,18 +73,19 @@ source <name_of_virtual_environment>/bin/activate
 ```
 * Note: The project contains absolute paths in task6.py, task7.py, test_task6.py, and test_task7.py so these instructions are best suited for an environment in DevEdu.
 
-#### 2) Install dependencies.
-```
-pip install -r requirements.txt
-```
 
-#### 3) Clone the repository,
+#### 2) Clone the repository,
 ```
 git clone git@github.com:lkarsanb/cs4300.git 
 ```
 
 * Note: The clone may not work if the SSH connection is not set up properly. If not, the following commands can be used instead.
       ``` git clone git clone https://github.com/lkarsanb/cs4300.git ```
+
+#### 2) Install dependencies.
+```
+pip install -r requirements.txt
+```
 
 
 #### 4) cd into the movie_theater_booking directory (where manage.py is located).
