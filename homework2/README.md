@@ -6,7 +6,7 @@ In this project, I was able to interact with Python, Django, Django REST Framewo
 ## API EndPoints
 - /api/movies/
 - /api/seats/
-- api/bookings
+- /api/bookings/
 
 ## Website Design
 - Movies page which is the home page of the website that allows users to view all movies showing.
@@ -132,7 +132,6 @@ python manage.py test
 ```
 
 #### If DEBUG = True, then only the following command must be run:
-lowing commands must be run.
 ```
 python manage.py test
 ```
