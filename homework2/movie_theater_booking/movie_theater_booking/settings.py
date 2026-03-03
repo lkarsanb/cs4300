@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CSRF_TRUSTED_ORIGINS = ["https://app-lkarsanb-21.devedu.io", "cs4300-movie-booking-9hci.onrender.com",]
+CSRF_TRUSTED_ORIGINS = ["https://app-lkarsanb-21.devedu.io", "https://cs4300-movie-booking-9hci.onrender.com",]
 
 ROOT_URLCONF = 'movie_theater_booking.urls'
 
