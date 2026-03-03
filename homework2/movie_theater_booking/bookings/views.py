@@ -1,4 +1,5 @@
 from datetime import datetime
+from django.contrib import messages
 from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
@@ -129,6 +130,7 @@ def process_booking(request, movie_id, seat_id):
 
         # Send user to bookings page to view the booking.
         return redirect("booking_history")
+    messages.error(request, "Must be logged in to book a seat. Please try booking again after signing in.")
     return redirect("home")
 
 def cancel_booking_html(request, booking_id):

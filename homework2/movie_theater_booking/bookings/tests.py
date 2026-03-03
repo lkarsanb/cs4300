@@ -16,7 +16,7 @@ from rest_framework.test import APITestCase, APIClient
 from .admin import SEAT_ROWS, SEAT_COLS, SeatAdmin
 User = get_user_model()
 
-# Create your tests here.
+
 class MovieModelTest(TestCase):
     def setUp(self):
         """
@@ -86,6 +86,7 @@ class MovieModelTest(TestCase):
                                  description="Test Movie Description",
                                  release_date=date.today(),
                                  duration=duration)
+
 
 
 class SeatModelTest(TestCase):
@@ -199,6 +200,8 @@ class SeatModelTest(TestCase):
                                 seat_row="A",
                                 seat_col=1)
 
+
+
 class BookingModelTest(TestCase):
     def setUp(self):
         """
@@ -234,6 +237,8 @@ class BookingModelTest(TestCase):
         self.assertEqual(self.booking.seat, self.test_seat)
         self.assertEqual(self.booking.user, self.test_user)
         self.assertIn("Test Movie", str(self.booking))
+
+
 
 class ViewTest(TestCase):
     def setUp(self):
@@ -537,6 +542,8 @@ class ViewTest(TestCase):
         self.assertEqual(response.status_code,200)
         self.assertFalse(response.context["form"].is_valid())
 
+
+
 class TestAdmin(TestCase):
     def setUp(self):
         datetime_version = datetime(2026, 5, 20, 14, 0, 0)
@@ -551,7 +558,6 @@ class TestAdmin(TestCase):
                                         movie_time=self.datetime_version,
                                         seat_row="A",
                                         seat_col=1)
-
 
     def test_generate_seats(self):
         """
@@ -571,6 +577,8 @@ class TestAdmin(TestCase):
 
         expected_total = len(SEAT_ROWS) * len(SEAT_COLS)
         self.assertEqual(Seat.objects.count(), expected_total)
+
+
 
 class BookingHistoryHtmlTest(TestCase):
     def setUp(self):
@@ -597,7 +605,6 @@ class BookingHistoryHtmlTest(TestCase):
                                               seat=self.seat,
                                               booking_date=date.today().strftime("%Y-%m-%d"))
         self.url = reverse("booking_history")
-
 
     def test_movie_list_html(self):
         url = reverse("home")
@@ -627,6 +634,7 @@ class BookingHistoryHtmlTest(TestCase):
         response = self.client.get(self.url)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(response.context["bookings"], [])
+
 
 
 class MovieAPITest(APITestCase):
@@ -705,6 +713,7 @@ class MovieAPITest(APITestCase):
         response = self.client.delete(url)
         self.assertEqual(response.status_code, HTTP_204_NO_CONTENT)
         self.assertEqual(Movie.objects.count(), 0)
+
 
 
 class SeatAPITest(APITestCase):

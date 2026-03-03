@@ -25,6 +25,7 @@ class Movie(models.Model):
         """Returns the title of the movie."""
         return self.title
 
+
 class Seat(models.Model):
     """
     Class for a seat model. Creates initial attributes including movie, movie location, seat number and booking status.
