@@ -15,8 +15,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='django-insecure-5ly(++#b=c-fk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = "RENDER" not in os.environ
 #DEBUG = True
-ALLOWED_HOSTS = ['*']
-#ALLOWED_HOSTS = ["app-lkarsanb-21.devedu.io", "cs4300-movie-booking-9hci.onrender.com",]
+#ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["app-lkarsanb-21.devedu.io", "cs4300-movie-booking-9hci.onrender.com",]
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
@@ -128,7 +128,8 @@ USE_TZ = True
 # Static images for the design of the website.
 STATIC_URL = 'static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Default primary key field type
