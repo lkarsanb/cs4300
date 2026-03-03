@@ -82,16 +82,17 @@ git clone git@github.com:lkarsanb/cs4300.git
 * Note: The clone may not work if the SSH connection is not set up properly. If not, the following commands can be used instead.
       ``` git clone git clone https://github.com/lkarsanb/cs4300.git ```
 
-#### 2) Install dependencies.
+
+#### 3) cd into the movie_theater_booking directory (where manage.py is located).
+```
+cd cs4300/homework2/movie_theater_booking
+```
+
+#### 4) Install dependencies.
 ```
 pip install -r requirements.txt
 ```
 
-
-#### 4) cd into the movie_theater_booking directory (where manage.py is located).
-```
-cd cs4300/homework2/movie_theater_booking
-```
 
 #### 5) From here, you can run migrations.
 ```
