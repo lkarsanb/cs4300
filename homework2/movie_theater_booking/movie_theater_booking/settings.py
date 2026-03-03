@@ -13,9 +13,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY =SECRET_KEY = os.environ.get('SECRET_KEY', default='django-insecure-5ly(++#b=c-fk8x7pffw)83a4qh@7o$ekp#)o*n%jud4)==^)5')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = "RENDER" not in os.environ
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["app-lkarsanb-21.devedu.io",]
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
 if RENDER_EXTERNAL_HOSTNAME:
@@ -76,11 +76,19 @@ WSGI_APPLICATION = 'movie_theater_booking.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': dj_database_url.config(conn_max_age=600, ssl_require=True
-    )
-}
+if os.getenv("DATABASE_URL") and os.getenv("RENDER"): 
+    DATABASES = {
+        'default': dj_database_url.config(conn_max_age=600, ssl_require=True
+        )
+    }
 
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -118,12 +126,13 @@ USE_TZ = True
 
 # Static images for the design of the website.
 STATIC_URL = 'static/'
+
 # When Debug = False, use STATIC_ROOT
-if not DEBUG:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-    STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-else:
-    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+# if not DEBUG:
+#     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+#     STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+# # else:
+# #     STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 
 # Default primary key field type
