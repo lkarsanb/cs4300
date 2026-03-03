@@ -80,7 +80,9 @@ git clone git@github.com:lkarsanb/cs4300.git
 ```
 
 * Note: The clone may not work if the SSH connection is not set up properly. If not, the following commands can be used instead.
-``` git clone https://github.com/lkarsanb/cs4300.git ```
+    ```
+     git clone https://github.com/lkarsanb/cs4300.git
+    ```
 
 
 #### 3) cd into the movie_theater_booking directory (where manage.py is located).
