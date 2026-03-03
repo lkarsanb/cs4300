@@ -13,7 +13,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY =SECRET_KEY = os.environ.get('SECRET_KEY', default='django-insecure-5ly(++#b=c-fk8x7pffw)83a4qh@7o$ekp#)o*n%jud4)==^)5')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = "RENDER" not in os.environ
+DEBUG = False
+# DEBUG = "RENDER" not in os.environ
 
 ALLOWED_HOSTS = ['*']
 # ALLOWED_HOSTS = ["app-lkarsanb-21.devedu.io", "cs4300-movie-booking-9hci.onrender.com",]
@@ -77,7 +78,7 @@ WSGI_APPLICATION = 'movie_theater_booking.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-if os.getenv("DATABASE_URL") and os.getenv("RENDER"): 
+if not DEBUG: 
     DATABASES = {
         'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
     }
