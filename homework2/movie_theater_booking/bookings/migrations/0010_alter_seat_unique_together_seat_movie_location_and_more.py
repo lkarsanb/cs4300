@@ -4,24 +4,26 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('bookings', '0009_alter_movie_image_alter_seat_movie'),
+        ("bookings", "0009_alter_movie_image_alter_seat_movie"),
     ]
 
     operations = [
         migrations.AlterUniqueTogether(
-            name='seat',
+            name="seat",
             unique_together=set(),
         ),
         migrations.AddField(
-            model_name='seat',
-            name='movie_location',
-            field=models.PositiveSmallIntegerField(default=1, help_text='Theater 1-5'),
+            model_name="seat",
+            name="movie_location",
+            field=models.PositiveSmallIntegerField(default=1, help_text="Theater 1-5"),
             preserve_default=False,
         ),
         migrations.AddConstraint(
-            model_name='seat',
-            constraint=models.UniqueConstraint(fields=('movie', 'movie_location', 'seat_row', 'seat_col'), name='unique_seats'),
+            model_name="seat",
+            constraint=models.UniqueConstraint(
+                fields=("movie", "movie_location", "seat_row", "seat_col"),
+                name="unique_seats",
+            ),
         ),
     ]

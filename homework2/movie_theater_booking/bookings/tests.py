@@ -1,11 +1,17 @@
 from django.contrib.admin import AdminSite
-from django.contrib.messages.storage.fallback import FallbackStorage
 from django.core.exceptions import ValidationError
 from django.db import IntegrityError
-from django.test import TestCase, RequestFactory
+from django.test import TestCase
 from rest_framework import status
-from rest_framework.status import HTTP_200_OK, HTTP_201_CREATED, HTTP_403_FORBIDDEN, HTTP_400_BAD_REQUEST, \
-    HTTP_404_NOT_FOUND, HTTP_204_NO_CONTENT, HTTP_405_METHOD_NOT_ALLOWED
+from rest_framework.status import (
+    HTTP_200_OK,
+    HTTP_201_CREATED,
+    HTTP_403_FORBIDDEN,
+    HTTP_400_BAD_REQUEST,
+    HTTP_404_NOT_FOUND,
+    HTTP_204_NO_CONTENT,
+    HTTP_405_METHOD_NOT_ALLOWED,
+)
 
 from .models import Movie, Seat, Booking
 from datetime import date, datetime
@@ -13,7 +19,8 @@ from django.utils import timezone
 from django.urls import reverse
 from django.contrib.auth import get_user_model
 from rest_framework.test import APITestCase, APIClient
-from .admin import SEAT_ROWS, SEAT_COLS, SeatAdmin
+from .admin import SEAT_ROWS, SEAT_COLS
+
 User = get_user_model()
 
 
@@ -22,10 +29,12 @@ class MovieModelTest(TestCase):
         """
         Set up a valid movie that can be used by the tests.
         """
-        self.valid_movie = Movie.objects.create(title="Test Movie Title 123 !",
-                                                description="Test Movie Description",
-                                                release_date=date.today(),
-                                                duration=90)
+        self.valid_movie = Movie.objects.create(
+            title="Test Movie Title 123 !",
+            description="Test Movie Description",
+            release_date=date.today(),
+            duration=90,
+        )
 
     def test_movie_creation(self):
         """
@@ -53,10 +62,12 @@ class MovieModelTest(TestCase):
         Test that the length of the title must be less than 255 characters.
         """
         title = "Test Movie Title" * 200
-        movie = Movie.objects.create(title=title,
-                             description="Test Movie Description",
-                             release_date=date.today(),
-                             duration=90)
+        movie = Movie.objects.create(
+            title=title,
+            description="Test Movie Description",
+            release_date=date.today(),
+            duration=90,
+        )
         with self.assertRaises(ValidationError):
             movie.full_clean()
 
@@ -65,16 +76,17 @@ class MovieModelTest(TestCase):
         Test that the title can be exactly 255 characters.
         """
         title = "A" * 255
-        movie = Movie.objects.create(title=title,
-                                     description="Test Movie Description",
-                                     release_date=date.today(),
-                                     duration=90)
+        movie = Movie.objects.create(
+            title=title,
+            description="Test Movie Description",
+            release_date=date.today(),
+            duration=90,
+        )
 
         self.assertEqual(movie.title, title)
         self.assertEqual(movie.description, "Test Movie Description")
         self.assertEqual(movie.release_date, date.today())
         self.assertEqual(movie.duration, 90)
-
 
     def test_duration_positive(self):
         """
@@ -82,27 +94,32 @@ class MovieModelTest(TestCase):
         """
         duration = -100
         with self.assertRaises(IntegrityError):
-            Movie.objects.create(title="title",
-                                 description="Test Movie Description",
-                                 release_date=date.today(),
-                                 duration=duration)
-
+            Movie.objects.create(
+                title="title",
+                description="Test Movie Description",
+                release_date=date.today(),
+                duration=duration,
+            )
 
 
 class SeatModelTest(TestCase):
     def setUp(self):
-        """"
+        """ "
         Create valid seat to be used by tests.
         """
-        self.movie = Movie.objects.create(title="Seat Test Movie Title",
-                                          description="Another Test Movie Description",
-                                          release_date=date.today(),
-                                          duration=180)
-        self.seat = Seat.objects.create(movie=self.movie,
-                                        movie_location=1,
-                                        movie_time=timezone.now(),
-                                        seat_row="A",
-                                        seat_col=1)
+        self.movie = Movie.objects.create(
+            title="Seat Test Movie Title",
+            description="Another Test Movie Description",
+            release_date=date.today(),
+            duration=180,
+        )
+        self.seat = Seat.objects.create(
+            movie=self.movie,
+            movie_location=1,
+            movie_time=timezone.now(),
+            seat_row="A",
+            seat_col=1,
+        )
 
     def test_default_is_booked(self):
         """
@@ -116,7 +133,9 @@ class SeatModelTest(TestCase):
         """
         self.seat.is_booked = True
         self.seat.save()
-        self.assertEqual(str(self.seat), "Seat Test Movie Title: Theater 1 Seat A1 (Unavailable)")
+        self.assertEqual(
+            str(self.seat), "Seat Test Movie Title: Theater 1 Seat A1 (Unavailable)"
+        )
 
     def test_str_method_when_is_not_booked(self):
         """
@@ -124,7 +143,9 @@ class SeatModelTest(TestCase):
         """
         self.seat.is_booked = False
         self.seat.save()
-        self.assertEqual(str(self.seat), "Seat Test Movie Title: Theater 1 Seat A1 (Available)")
+        self.assertEqual(
+            str(self.seat), "Seat Test Movie Title: Theater 1 Seat A1 (Available)"
+        )
 
     def test_future_booking_time(self):
         """
@@ -132,16 +153,20 @@ class SeatModelTest(TestCase):
         ked if it has not been released yet.
         """
         release_date = date(3000, 1, 1)
-        future_movie = Movie.objects.create(title="Future Movie Title",
-                                            description="Test Movie Description",
-                                            release_date=release_date,
-                                            duration=180)
+        future_movie = Movie.objects.create(
+            title="Future Movie Title",
+            description="Test Movie Description",
+            release_date=release_date,
+            duration=180,
+        )
 
-        seat = Seat.objects.create(movie=future_movie,
-                                   movie_location=1,
-                                   movie_time=timezone.now(),
-                                   seat_row="A",
-                                   seat_col=1)
+        seat = Seat.objects.create(
+            movie=future_movie,
+            movie_location=1,
+            movie_time=timezone.now(),
+            seat_row="A",
+            seat_col=1,
+        )
         with self.assertRaises(ValidationError):
             seat.clean()
 
@@ -149,25 +174,28 @@ class SeatModelTest(TestCase):
         """
         Test that invalid seat row raises an error.
         """
-        seat = Seat.objects.create(movie=self.movie,
-                                   movie_location=1,
-                                   movie_time=timezone.now(),
-                                   seat_row="Hello",
-                                   seat_col=1)
+        seat = Seat.objects.create(
+            movie=self.movie,
+            movie_location=1,
+            movie_time=timezone.now(),
+            seat_row="Hello",
+            seat_col=1,
+        )
         with self.assertRaises(ValidationError):
             seat.full_clean()
-
 
     def test_invalid_seat_row(self):
         """
         Test that the clean method ensures seat row is A-F.
         """
         seat_row = "J"
-        seat = Seat.objects.create(movie=self.movie,
-                                   movie_location=1,
-                                   movie_time=timezone.now(),
-                                   seat_row=seat_row,
-                                   seat_col=1)
+        seat = Seat.objects.create(
+            movie=self.movie,
+            movie_location=1,
+            movie_time=timezone.now(),
+            seat_row=seat_row,
+            seat_col=1,
+        )
         with self.assertRaises(ValidationError):
             seat.clean()
 
@@ -176,30 +204,35 @@ class SeatModelTest(TestCase):
         Test that the clean method ensures seat col is 1-6.
         """
         seat_col = 100
-        seat = Seat.objects.create(movie=self.movie,
-                                   movie_location=1,
-                                   movie_time=timezone.now(),
-                                   seat_row="A",
-                                   seat_col=seat_col)
+        seat = Seat.objects.create(
+            movie=self.movie,
+            movie_location=1,
+            movie_time=timezone.now(),
+            seat_row="A",
+            seat_col=seat_col,
+        )
         with self.assertRaises(ValidationError):
             seat.clean()
 
     def test_seat_unique_constraint(self):
         """Test that the same seat, time, and location cannot be booked."""
         movie_time = timezone.make_aware(datetime(2000, 1, 1, 13, 1, 0))
-        Seat.objects.create(movie=self.movie,
-                            movie_location=1,
-                            movie_time=movie_time,
-                            seat_row="A",
-                            seat_col=1)
+        Seat.objects.create(
+            movie=self.movie,
+            movie_location=1,
+            movie_time=movie_time,
+            seat_row="A",
+            seat_col=1,
+        )
 
         with self.assertRaises(IntegrityError):
-            Seat.objects.create(movie=self.movie,
-                                movie_location=1,
-                                movie_time=movie_time,
-                                seat_row="A",
-                                seat_col=1)
-
+            Seat.objects.create(
+                movie=self.movie,
+                movie_location=1,
+                movie_time=movie_time,
+                seat_row="A",
+                seat_col=1,
+            )
 
 
 class BookingModelTest(TestCase):
@@ -207,20 +240,26 @@ class BookingModelTest(TestCase):
         """
         Create a valid booking to be used by tests.
         """
-        self.test_movie = Movie.objects.create(title="Another Test Movie Title",
-                                          description="Another Test Movie Description",
-                                          release_date=date.today(),
-                                          duration=180)
-        self.test_seat = Seat.objects.create(movie=self.test_movie,
-                                        movie_location=2,
-                                        movie_time=timezone.now(),
-                                        seat_row="A",
-                                        seat_col=2)
+        self.test_movie = Movie.objects.create(
+            title="Another Test Movie Title",
+            description="Another Test Movie Description",
+            release_date=date.today(),
+            duration=180,
+        )
+        self.test_seat = Seat.objects.create(
+            movie=self.test_movie,
+            movie_location=2,
+            movie_time=timezone.now(),
+            seat_row="A",
+            seat_col=2,
+        )
         self.test_user = User.objects.create(username="Test User")
-        self.booking = Booking.objects.create(movie=self.test_movie,
-                                              seat=self.test_seat,
-                                              user=self.test_user,
-                                              booking_date=timezone.now())
+        self.booking = Booking.objects.create(
+            movie=self.test_movie,
+            seat=self.test_seat,
+            user=self.test_user,
+            booking_date=timezone.now(),
+        )
 
     def test_str_method(self):
         """
@@ -239,27 +278,32 @@ class BookingModelTest(TestCase):
         self.assertIn("Test Movie", str(self.booking))
 
 
-
 class ViewTest(TestCase):
     def setUp(self):
         """
         Create valid user, movie, and seat to be used by tests.
         """
         self.time = timezone.now()
-        self.movie = Movie.objects.create(title="Another Test Movie Title",
-                                          description="Another Test Movie Description",
-                                          release_date=date.today(),
-                                          duration=180)
-        self.seat = Seat.objects.create(movie=self.movie,
-                                        movie_location=2,
-                                        movie_time=self.time,
-                                        seat_row="A",
-                                        seat_col=2)
+        self.movie = Movie.objects.create(
+            title="Another Test Movie Title",
+            description="Another Test Movie Description",
+            release_date=date.today(),
+            duration=180,
+        )
+        self.seat = Seat.objects.create(
+            movie=self.movie,
+            movie_location=2,
+            movie_time=self.time,
+            seat_row="A",
+            seat_col=2,
+        )
         self.user = User.objects.create(username="Test User", password="TestPass")
-        self.booking = Booking.objects.create(movie=self.movie,
-                                              seat=self.seat,
-                                              user=self.user,
-                                              booking_date=timezone.now())
+        self.booking = Booking.objects.create(
+            movie=self.movie,
+            seat=self.seat,
+            user=self.user,
+            booking_date=timezone.now(),
+        )
 
     def test_movie_list_html(self):
         """
@@ -297,11 +341,13 @@ class ViewTest(TestCase):
 
         # Create multiple seats for 1 movie.
         for i in range(3):
-            Seat.objects.create(movie=self.movie,
-                                movie_location=i,
-                                movie_time=time,
-                                seat_row="A",
-                                seat_col=i + 1)
+            Seat.objects.create(
+                movie=self.movie,
+                movie_location=i,
+                movie_time=time,
+                seat_row="A",
+                seat_col=i + 1,
+            )
 
         url = reverse("movie_time", args=(self.movie.id,))
         response = self.client.get(url)
@@ -312,10 +358,12 @@ class ViewTest(TestCase):
         self.assertIn(time.date(), dates)
 
     def test_movie_time_html_no_showings(self):
-        no_showing_movie = Movie.objects.create(title="No showings",
-                                                description="No showings",
-                                                release_date=date.today(),
-                                                duration=100)
+        no_showing_movie = Movie.objects.create(
+            title="No showings",
+            description="No showings",
+            release_date=date.today(),
+            duration=100,
+        )
         url = reverse("movie_time", args=(no_showing_movie.id,))
         response = self.client.get(url)
 
@@ -331,11 +379,13 @@ class ViewTest(TestCase):
         my_time = "14:00:00"
         datetime_version = datetime(2026, 5, 20, 14, 0, 0)
         datetime_version = timezone.make_aware(datetime_version)
-        my_seat = Seat.objects.create(movie=self.movie,
-                                      movie_location=1,
-                                      movie_time=datetime_version,
-                                      seat_row="A",
-                                      seat_col=1)
+        my_seat = Seat.objects.create(
+            movie=self.movie,
+            movie_location=1,
+            movie_time=datetime_version,
+            seat_row="A",
+            seat_col=1,
+        )
         url = reverse("seat_booking", args=(self.movie.id,))
         query_string = f"?show_date={my_date}&show_time={my_time}"
 
@@ -361,12 +411,14 @@ class ViewTest(TestCase):
         datetime_version = datetime(2026, 5, 20, 14, 0, 0)
         datetime_version = timezone.make_aware(datetime_version)
 
-        booked_seat = Seat.objects.create(movie=self.movie,
-                                          movie_location=1,
-                                          movie_time=datetime_version,
-                                          seat_row="A",
-                                          seat_col=1,
-                                          is_booked=True)
+        booked_seat = Seat.objects.create(
+            movie=self.movie,
+            movie_location=1,
+            movie_time=datetime_version,
+            seat_row="A",
+            seat_col=1,
+            is_booked=True,
+        )
         my_date = booked_seat.movie_time.strftime("%Y-%m-%d")
         my_time = booked_seat.movie_time.strftime("%H:%M:%S")
 
@@ -457,9 +509,9 @@ class ViewTest(TestCase):
 
         self.seat.is_booked = True
         self.seat.save()
-        booking = Booking.objects.create(user=self.user,
-                                         movie=self.movie,
-                                         seat=self.seat)
+        booking = Booking.objects.create(
+            user=self.user, movie=self.movie, seat=self.seat
+        )
         initial_num_bookings = Booking.objects.count()
         url = reverse("cancel_booking", args=(booking.id,))
 
@@ -486,9 +538,7 @@ class ViewTest(TestCase):
         :return:
         """
         user = User.objects.create(username="good", password="1234")
-        booking = Booking.objects.create(user=user,
-                                         movie=self.movie,
-                                         seat=self.seat)
+        booking = Booking.objects.create(user=user, movie=self.movie, seat=self.seat)
 
         # self.user trying to access user's booking.
         self.client.force_login(self.user)
@@ -514,7 +564,7 @@ class ViewTest(TestCase):
         data = {
             "username": "user123",
             "password1": "Test.1234!!",
-            "password2": "Test.1234!!"
+            "password2": "Test.1234!!",
         }
 
         response = self.client.post(reverse("signup"), data=data)
@@ -534,14 +584,13 @@ class ViewTest(TestCase):
         data = {
             "username": "user123",
             "password1": "Test.1234!!",
-            "password2": "Test.1234!!"
+            "password2": "Test.1234!!",
         }
 
         response = self.client.post(reverse("signup"), data=data)
         self.assertEqual(User.objects.count(), initial_user_count)
-        self.assertEqual(response.status_code,200)
+        self.assertEqual(response.status_code, 200)
         self.assertFalse(response.context["form"].is_valid())
-
 
 
 class TestAdmin(TestCase):
@@ -549,15 +598,19 @@ class TestAdmin(TestCase):
         datetime_version = datetime(2026, 5, 20, 14, 0, 0)
         self.datetime_version = timezone.make_aware(datetime_version)
         self.site = AdminSite()
-        self.movie = Movie.objects.create(title="Movie Title",
-                                          description="Test Movie Description",
-                                          release_date=self.datetime_version.date(),
-                                          duration=100)
-        self.seat = Seat.objects.create(movie=self.movie,
-                                        movie_location=1,
-                                        movie_time=self.datetime_version,
-                                        seat_row="A",
-                                        seat_col=1)
+        self.movie = Movie.objects.create(
+            title="Movie Title",
+            description="Test Movie Description",
+            release_date=self.datetime_version.date(),
+            duration=100,
+        )
+        self.seat = Seat.objects.create(
+            movie=self.movie,
+            movie_location=1,
+            movie_time=self.datetime_version,
+            seat_row="A",
+            seat_col=1,
+        )
 
     def test_generate_seats(self):
         """
@@ -579,31 +632,40 @@ class TestAdmin(TestCase):
         self.assertEqual(Seat.objects.count(), expected_total)
 
 
-
 class BookingHistoryHtmlTest(TestCase):
     def setUp(self):
         self.user = User.objects.create(username="TestUser", password="TestPass")
-        self.movie1 = Movie.objects.create(title="Test1 Movie Title",
-                                           description="Test1 Movie Description",
-                                           release_date=date.today(),
-                                           duration=90)
-        self.movie2 = Movie.objects.create(title="Test2 Movie Title",
-                                           description="Test2 Movie Description",
-                                           release_date=date.today(),
-                                           duration=100)
-        self.movie3 = Movie.objects.create(title="Test3 Movie Title",
-                                           description="Test3 Movie Description",
-                                           release_date=date.today(),
-                                           duration=110)
-        self.seat = Seat.objects.create(movie=self.movie1,
-                                        seat_row="A",
-                                        seat_col=1,
-                                        movie_time=timezone.now(),
-                                        movie_location=1)
-        self.booking = Booking.objects.create(movie=self.movie2,
-                                              user=self.user,
-                                              seat=self.seat,
-                                              booking_date=date.today().strftime("%Y-%m-%d"))
+        self.movie1 = Movie.objects.create(
+            title="Test1 Movie Title",
+            description="Test1 Movie Description",
+            release_date=date.today(),
+            duration=90,
+        )
+        self.movie2 = Movie.objects.create(
+            title="Test2 Movie Title",
+            description="Test2 Movie Description",
+            release_date=date.today(),
+            duration=100,
+        )
+        self.movie3 = Movie.objects.create(
+            title="Test3 Movie Title",
+            description="Test3 Movie Description",
+            release_date=date.today(),
+            duration=110,
+        )
+        self.seat = Seat.objects.create(
+            movie=self.movie1,
+            seat_row="A",
+            seat_col=1,
+            movie_time=timezone.now(),
+            movie_location=1,
+        )
+        self.booking = Booking.objects.create(
+            movie=self.movie2,
+            user=self.user,
+            seat=self.seat,
+            booking_date=date.today().strftime("%Y-%m-%d"),
+        )
         self.url = reverse("booking_history")
 
     def test_movie_list_html(self):
@@ -636,13 +698,14 @@ class BookingHistoryHtmlTest(TestCase):
         self.assertEqual(response.context["bookings"], [])
 
 
-
 class MovieAPITest(APITestCase):
     def setUp(self):
-        self.movie = Movie.objects.create(title="Another Test Movie Title",
-                                          description="Another Test Movie Description",
-                                          release_date=date.today(),
-                                          duration=100)
+        self.movie = Movie.objects.create(
+            title="Another Test Movie Title",
+            description="Another Test Movie Description",
+            release_date=date.today(),
+            duration=100,
+        )
         self.url = reverse("movie-list")
         self.client = APIClient()
 
@@ -661,7 +724,10 @@ class MovieAPITest(APITestCase):
         self.assertEqual(response.status_code, HTTP_200_OK)
         self.assertEqual(response.json().get("title"), self.movie.title)
         self.assertEqual(response.json().get("description"), self.movie.description)
-        self.assertEqual(response.json().get("release_date"), self.movie.release_date.strftime("%Y-%m-%d"))
+        self.assertEqual(
+            response.json().get("release_date"),
+            self.movie.release_date.strftime("%Y-%m-%d"),
+        )
         self.assertEqual(response.json().get("duration"), self.movie.duration)
 
     def test_create_movie(self):
@@ -705,7 +771,10 @@ class MovieAPITest(APITestCase):
         self.assertEqual(response.status_code, HTTP_200_OK)
         self.assertEqual(response.json().get("title"), data["title"])
         self.assertEqual(response.json().get("description"), data["description"])
-        self.assertEqual(response.json().get("release_date"), data["release_date"].strftime("%Y-%m-%d"))
+        self.assertEqual(
+            response.json().get("release_date"),
+            data["release_date"].strftime("%Y-%m-%d"),
+        )
         self.assertEqual(response.json().get("duration"), data["duration"])
 
     def test_delete_movie(self):
@@ -715,18 +784,21 @@ class MovieAPITest(APITestCase):
         self.assertEqual(Movie.objects.count(), 0)
 
 
-
 class SeatAPITest(APITestCase):
     def setUp(self):
-        self.movie = Movie.objects.create(title="Another Test Movie Title",
-                                          description="Another Test Movie Description",
-                                          release_date=date.today(),
-                                          duration=100)
-        self.seat = Seat.objects.create(movie=self.movie,
-                                        movie_location=2,
-                                        movie_time=timezone.now(),
-                                        seat_row="A",
-                                        seat_col=2)
+        self.movie = Movie.objects.create(
+            title="Another Test Movie Title",
+            description="Another Test Movie Description",
+            release_date=date.today(),
+            duration=100,
+        )
+        self.seat = Seat.objects.create(
+            movie=self.movie,
+            movie_location=2,
+            movie_time=timezone.now(),
+            seat_row="A",
+            seat_col=2,
+        )
 
     def test_get_seat(self):
         url = reverse("seat-detail", args=(self.seat.id,))
@@ -734,24 +806,26 @@ class SeatAPITest(APITestCase):
         self.assertEqual(response.status_code, HTTP_200_OK)
 
 
-
 class BookingAPI(APITestCase):
     def setUp(self):
         self.user = User.objects.create(username="Test User", password="TestPass")
         self.non_user = User.objects.create(username="Non User")
-        self.movie = Movie.objects.create(title="Another Test Movie Title",
-                                          description="Another Test Movie Description",
-                                          release_date=date.today(),
-                                          duration=100)
-        self.seat = Seat.objects.create(movie=self.movie,
-                                        movie_location=2,
-                                        movie_time=timezone.now(),
-                                        seat_row="A",
-                                        seat_col=2)
-        self.booking = Booking.objects.create(movie=self.movie,
-                                              seat=self.seat,
-                                              user=self.user,
-                                              booking_date=date.today())
+        self.movie = Movie.objects.create(
+            title="Another Test Movie Title",
+            description="Another Test Movie Description",
+            release_date=date.today(),
+            duration=100,
+        )
+        self.seat = Seat.objects.create(
+            movie=self.movie,
+            movie_location=2,
+            movie_time=timezone.now(),
+            seat_row="A",
+            seat_col=2,
+        )
+        self.booking = Booking.objects.create(
+            movie=self.movie, seat=self.seat, user=self.user, booking_date=date.today()
+        )
         self.url = reverse("booking-detail", args=(self.booking.id,))
         self.client = APIClient()
 

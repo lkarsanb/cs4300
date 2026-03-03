@@ -8,11 +8,13 @@ from rest_framework import viewsets, permissions
 from .models import Movie, Seat, Booking
 from .serializers import MovieSerializer, SeatSerializer, BookingSerializer
 
+
 # Class based views for API.
 class MovieViewSet(viewsets.ModelViewSet):
     """
     Create ViewSet for Movies here that uses normal CRUD operations inherited from ModelViewSet.
     """
+
     queryset = Movie.objects.all()
     serializer_class = MovieSerializer
     permission_classes = [permissions.AllowAny]
@@ -22,6 +24,7 @@ class SeatViewSet(viewsets.ModelViewSet):
     """
     Create ViewSet for Seats here that inherits from ModelViewSet.
     """
+
     queryset = Seat.objects.all()
     serializer_class = SeatSerializer
     permission_classes = [permissions.AllowAny]
@@ -31,6 +34,7 @@ class BookingViewSet(viewsets.ModelViewSet):
     """
     Create ViewSet for Bookings here that inherits from ModelViewSet.
     """
+
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer
     permission_classes = [permissions.IsAuthenticated]
@@ -46,13 +50,14 @@ def movie_list_html(request):
     movies = Movie.objects.all()
     return render(request, "bookings/movie_list.html", {"movies": movies})
 
+
 def movie_time_html(request, movie_id):
-    '''
+    """
     Returns the times and dates for a certain movie.
     :param request: HTTP request containing information about the request.
     :param movie_id: The id of movie dates and times are needed for.
     :return: HTTP response containing movies and dates with times.
-    '''
+    """
     movie = get_object_or_404(Movie, id=movie_id)
     showings = Seat.objects.filter(movie=movie)
     dates = {}
@@ -68,6 +73,7 @@ def movie_time_html(request, movie_id):
         dates[time] = sorted(dates[time])
 
     return render(request, "bookings/movie_time.html", {"movie": movie, "dates": dates})
+
 
 def seat_booking_html(request, movie_id):
     """
@@ -86,7 +92,11 @@ def seat_booking_html(request, movie_id):
         try:
             showing_time = datetime.strptime(show_time, "%H:%M:%S").time()
             showing_date = datetime.strptime(show_date, "%Y-%m-%d").date()
-            seats = Seat.objects.filter(movie=movie, movie_time__time=showing_time, movie_time__date=showing_date).order_by("seat_row", "seat_col")
+            seats = Seat.objects.filter(
+                movie=movie,
+                movie_time__time=showing_time,
+                movie_time__date=showing_date,
+            ).order_by("seat_row", "seat_col")
         except ValueError:
             seats = Seat.objects.none()
     else:
@@ -94,7 +104,12 @@ def seat_booking_html(request, movie_id):
 
     # A boolean to keep track of which movies are sold out.
     is_sold_out = not seats.filter(is_booked=False).exists()
-    return render(request, "bookings/seat_booking.html", {"movie": movie, "seats": seats, "is_sold_out": is_sold_out})
+    return render(
+        request,
+        "bookings/seat_booking.html",
+        {"movie": movie, "seats": seats, "is_sold_out": is_sold_out},
+    )
+
 
 def booking_history_html(request):
     """
@@ -108,6 +123,7 @@ def booking_history_html(request):
     else:
         bookings = []
     return render(request, "bookings/booking_history.html", {"bookings": bookings})
+
 
 @login_required
 def process_booking(request, movie_id, seat_id):
@@ -130,8 +146,12 @@ def process_booking(request, movie_id, seat_id):
 
         # Send user to bookings page to view the booking.
         return redirect("booking_history")
-    messages.error(request, "Must be logged in to book a seat. Please try booking again after signing in.")
+    messages.error(
+        request,
+        "Must be logged in to book a seat. Please try booking again after signing in.",
+    )
     return redirect("home")
+
 
 def cancel_booking_html(request, booking_id):
     """
@@ -149,6 +169,7 @@ def cancel_booking_html(request, booking_id):
 
     booking.delete()
     return redirect("booking_history")
+
 
 def signup_html(request):
     """

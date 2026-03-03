@@ -4,18 +4,17 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('bookings', '0006_alter_seat_movie'),
+        ("bookings", "0006_alter_seat_movie"),
     ]
 
     operations = [
         migrations.AlterUniqueTogether(
-            name='seat',
+            name="seat",
             unique_together=set(),
         ),
         migrations.RemoveField(
-            model_name='seat',
-            name='movie',
+            model_name="seat",
+            name="movie",
         ),
     ]

@@ -4,20 +4,19 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('bookings', '0012_alter_seat_movie_time'),
+        ("bookings", "0012_alter_seat_movie_time"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='seat',
-            name='seat_col',
-            field=models.PositiveIntegerField(help_text='Seat Column (1-6)'),
+            model_name="seat",
+            name="seat_col",
+            field=models.PositiveIntegerField(help_text="Seat Column (1-6)"),
         ),
         migrations.AlterField(
-            model_name='seat',
-            name='seat_row',
-            field=models.CharField(help_text='Seat Row (A-F)', max_length=1),
+            model_name="seat",
+            name="seat_row",
+            field=models.CharField(help_text="Seat Row (A-F)", max_length=1),
         ),
     ]

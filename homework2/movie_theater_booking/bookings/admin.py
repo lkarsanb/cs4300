@@ -6,6 +6,7 @@ from .models import SEAT_ROWS, SEAT_COLS
 admin.site.register(Movie)
 admin.site.register(Booking)
 
+
 @admin.register(Seat)
 class SeatAdmin(admin.ModelAdmin):
     actions = ["generate_seats"]
@@ -27,6 +28,6 @@ class SeatAdmin(admin.ModelAdmin):
                         movie_location=seat_obj.movie_location,
                         movie_time=seat_obj.movie_time,
                         seat_row=row,
-                        seat_col=col
+                        seat_col=col,
                     )
-        self.message_user(request, f"Seats generated successfully.", messages.SUCCESS)
+        self.message_user(request, "Seats generated successfully.", messages.SUCCESS)

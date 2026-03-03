@@ -16,13 +16,16 @@ urlpatterns = [
     # HTML Templates
     path("", views.movie_list_html, name="home"),
     path("seats/<int:movie_id>/", views.seat_booking_html, name="seat_booking"),
-    path("seats/book/<int:movie_id>/<int:seat_id>/", views.process_booking, name="book_selected_seat"),
+    path(
+        "seats/book/<int:movie_id>/<int:seat_id>/",
+        views.process_booking,
+        name="book_selected_seat",
+    ),
     path("times/<int:movie_id>/", views.movie_time_html, name="movie_time"),
     path("bookings/", views.booking_history_html, name="booking_history"),
-    path("cancel/<int:booking_id>/", views.cancel_booking_html, name="cancel_booking" ),
+    path("cancel/<int:booking_id>/", views.cancel_booking_html, name="cancel_booking"),
     path("accounts/", include("django.contrib.auth.urls")),
     path("signup/", views.signup_html, name="signup"),
-
     # API
     path("api-auth/", include("rest_framework.urls")),
     path("api/", include(router.urls)),

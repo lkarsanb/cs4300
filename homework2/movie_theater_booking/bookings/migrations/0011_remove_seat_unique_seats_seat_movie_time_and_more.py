@@ -4,23 +4,31 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('bookings', '0010_alter_seat_unique_together_seat_movie_location_and_more'),
+        ("bookings", "0010_alter_seat_unique_together_seat_movie_location_and_more"),
     ]
 
     operations = [
         migrations.RemoveConstraint(
-            model_name='seat',
-            name='unique_seats',
+            model_name="seat",
+            name="unique_seats",
         ),
         migrations.AddField(
-            model_name='seat',
-            name='movie_time',
+            model_name="seat",
+            name="movie_time",
             field=models.DateTimeField(blank=True, null=True),
         ),
         migrations.AddConstraint(
-            model_name='seat',
-            constraint=models.UniqueConstraint(fields=('movie', 'movie_location', 'movie_time', 'seat_row', 'seat_col'), name='unique_seats'),
+            model_name="seat",
+            constraint=models.UniqueConstraint(
+                fields=(
+                    "movie",
+                    "movie_location",
+                    "movie_time",
+                    "seat_row",
+                    "seat_col",
+                ),
+                name="unique_seats",
+            ),
         ),
     ]

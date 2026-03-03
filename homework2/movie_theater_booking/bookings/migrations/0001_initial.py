@@ -6,7 +6,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
@@ -15,32 +14,72 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Movie',
+            name="Movie",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=255)),
-                ('description', models.CharField(max_length=500)),
-                ('release_date', models.DateField()),
-                ('duration', models.PositiveIntegerField()),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("title", models.CharField(max_length=255)),
+                ("description", models.CharField(max_length=500)),
+                ("release_date", models.DateField()),
+                ("duration", models.PositiveIntegerField()),
             ],
         ),
         migrations.CreateModel(
-            name='Seat',
+            name="Seat",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('seat_row', models.CharField(max_length=1)),
-                ('seat_col', models.PositiveIntegerField()),
-                ('is_booked', models.BooleanField(default=False)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("seat_row", models.CharField(max_length=1)),
+                ("seat_col", models.PositiveIntegerField()),
+                ("is_booked", models.BooleanField(default=False)),
             ],
         ),
         migrations.CreateModel(
-            name='Booking',
+            name="Booking",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('booking_date', models.DateTimeField(auto_now_add=True)),
-                ('movie', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='bookings.movie')),
-                ('seat', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='bookings.seat')),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("booking_date", models.DateTimeField(auto_now_add=True)),
+                (
+                    "movie",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE, to="bookings.movie"
+                    ),
+                ),
+                (
+                    "seat",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE, to="bookings.seat"
+                    ),
+                ),
+                (
+                    "user",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
         ),
     ]

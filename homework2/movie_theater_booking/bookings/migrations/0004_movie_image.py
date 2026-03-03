@@ -4,16 +4,15 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('bookings', '0003_alter_movie_description_alter_movie_duration'),
+        ("bookings", "0003_alter_movie_description_alter_movie_duration"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='movie',
-            name='image',
-            field=models.ImageField(default='', upload_to='movie_covers/'),
+            model_name="movie",
+            name="image",
+            field=models.ImageField(default="", upload_to="movie_covers/"),
             preserve_default=False,
         ),
     ]

@@ -5,19 +5,22 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('bookings', '0007_alter_seat_unique_together_remove_seat_movie'),
+        ("bookings", "0007_alter_seat_unique_together_remove_seat_movie"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='seat',
-            name='movie',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, to='bookings.movie'),
+            model_name="seat",
+            name="movie",
+            field=models.ForeignKey(
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                to="bookings.movie",
+            ),
         ),
         migrations.AlterUniqueTogether(
-            name='seat',
-            unique_together={('movie', 'seat_row', 'seat_col')},
+            name="seat",
+            unique_together={("movie", "seat_row", "seat_col")},
         ),
     ]
