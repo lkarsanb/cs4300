@@ -14,7 +14,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='django-insecure-5ly(++#b=c-fk
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = "RENDER" not in os.environ
-DEBUG = TRUE
+DEBUG = True
 ALLOWED_HOSTS = ['*']
 #ALLOWED_HOSTS = ["app-lkarsanb-21.devedu.io", "cs4300-movie-booking-9hci.onrender.com",]
 
