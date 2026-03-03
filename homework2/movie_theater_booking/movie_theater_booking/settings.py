@@ -52,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CSRF_TRUSTED_ORIGINS = ["https://app-lkarsanb-21.devedu.io", ]
+CSRF_TRUSTED_ORIGINS = ["https://app-lkarsanb-21.devedu.io", "cs4300-movie-booking-9hci.onrender.com",]
 
 ROOT_URLCONF = 'movie_theater_booking.urls'
 
@@ -77,21 +77,20 @@ WSGI_APPLICATION = 'movie_theater_booking.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+ 
+DATABASES = {
+    'default': dj_database_url.config(
+        default=os.environ.get("DATABASE_URL"),
+        conn_max_age=600, )
+}
 
-if not DEBUG: 
-    DATABASES = {
-        'default': dj_database_url.config(
-            default=os.environ.get("DATABASE_URL"),
-            conn_max_age=600, )
-    }
-
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
+# else:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': BASE_DIR / 'db.sqlite3',
+#         }
+#     }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
