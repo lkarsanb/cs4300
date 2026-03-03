@@ -16,8 +16,11 @@ SECRET_KEY = os.environ.get(
 )
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = "RENDER" not in os.environ
-#DEBUG = True
+# Note: Due to the use of images in the assignment and render not allowing for these to be stored,
+# I left DEBUG as True, though in a production environment, I would use the following line to set
+# the DEBUG variable.
+#DEBUG = "RENDER" not in os.environ
+DEBUG = True
 ALLOWED_HOSTS = [
     "app-lkarsanb-21.devedu.io",
     "cs4300-movie-booking-9hci.onrender.com",
@@ -136,7 +139,7 @@ USE_TZ = True
 # Static images for the design of the website.
 STATIC_URL = "/static/"
 
-if DEBUG:
+if "RENDER" not in os.environ:
     STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 else:
