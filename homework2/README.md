@@ -125,10 +125,18 @@ Render is used to deploy this project as ``` https://cs4300-movie-booking-9hci.o
 This project was tested with unit tests, integration tests, and behavior driven tests.
 
 ### For unit and integration testing:
-#### 1) Ensure you are in the directory where manage.py is located. Run the following to run all tests in tests.py.
-``` 
+#### 1) Ensure you are in the directory where manage.py is located. If DEBUG = False in settings.py, since there are static files in this project, the following commands must be run.
+```
+python manage.py collectstatic --noinput
 python manage.py test
 ```
+
+#### If DEBUG = True, then only the following command must be run:
+lowing commands must be run.
+```
+python manage.py test
+```
+
 
 #### 2) To get a coverage report of the tests, run:
 ``` 
