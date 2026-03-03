@@ -129,11 +129,11 @@ USE_TZ = True
 # Static images for the design of the website.
 STATIC_URL = 'static/'
 # When Debug = False, use STATIC_ROOT
-if not DEBUG:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-    STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-else:
-    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+# if not DEBUG:
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+# else:
+#     STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 
 # Default primary key field type
