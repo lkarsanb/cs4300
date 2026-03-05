@@ -171,9 +171,9 @@ else:
             "BACKEND": "storages.backends.s3.S3Storage",
             "OPTIONS": {
                 "access_key": AWS_ACCESS_KEY_ID,
-                "secret_access": AWS_S3_SECRET_ACCESS_KEY,
-                "bucket_name": SUPABASE_BUCKET_NAME,
-                "region": AWS_S3_REGION_NAME,
+                "secret_key": AWS_S3_SECRET_ACCESS_KEY,
+                "bucket_name": AWS_STORAGE_BUCKET_NAME,
+                "region_name": AWS_S3_REGION_NAME,
                 "endpoint_url": AWS_S3_ENDPOINT_URL,
                 "default_acl": None,
                 "querystring_auth": False,
