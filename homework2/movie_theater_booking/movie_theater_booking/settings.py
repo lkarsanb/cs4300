@@ -155,20 +155,22 @@ if DEBUG:
     MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 else:
-    # Using Supabase to store media files.
-    SUPABASE_URL = os.getenv("SUPABASE_URL")
-    SUPABASE_KEY = os.getenv("SUPABASE_KEY")
-    # SUPABASE_MEDIA_BUCKET = "media"
-    SUPABASE_ROOT_PATH = "/media/"
+    INSTALLED_APPS += ["storages"]
+    SUPABASE_PROJ_URL = os.environ.get("SUPABASE_URL")
+    SUPABASE_BUCKET_NAME = os.environ.get("S3_SUPABASE_BUCKET_NAME")
 
     STORAGES = {
         "default": {
-            "BACKEND": "django_supabase_storage.SupabaseMediaStorage",
-            # "OPTIONS": {
-            #     "bucket_name": SUPABASE_MEDIA_BUCKET,
-            #     "supabase_url": SUPABASE_URL,
-            #     "supabase_key": SUPABASE_KEY
-            # }
+            "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
+            "OPTIONS": {
+                "access_key": os.environ.get("S3_SUPABASE_ACCESS_KEY"),
+                "secret_key": os.environ.get("S3_SUPABASE_SECRET_ACCESS_KEY"),
+                "bucket_name": SUPABASE_BUCKET_NAME,
+                "region_name": os.environ.get("S3_SUPABASE_REGION_NAME"),
+                "endpoint_url": os.environ.get("S3_SUPABASE_ENDPOINT_URL"),
+                "default_acl": None,
+                "querystring_auth": False,
+            }
         },
         # Static files still stored in render through Whitenoise.
         "staticfiles": {
@@ -176,4 +178,4 @@ else:
         },
     }
 
-    MEDIA_URL = f"{SUPABASE_URL}/storage/v1/object/public/{SUPABASE_MEDIA_BUCKET}/"
+    MEDIA_URL = f"{SUPABASE_PROJ_URL}/storage/v1/object/public/{SUPABASE_BUCKET_NAME}/"
