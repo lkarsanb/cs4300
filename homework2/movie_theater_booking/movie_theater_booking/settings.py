@@ -156,7 +156,6 @@ if DEBUG:
 
 else:
     INSTALLED_APPS += ["storages"]
-    SUPABASE_PROJ_URL = os.environ.get("SUPABASE_URL")
 
     AWS_S3_ENDPOINT_URL = os.environ.get("S3_SUPABASE_ENDPOINT_URL")
     AWS_ACCESS_KEY_ID = os.environ.get("S3_SUPABASE_ACCESS_KEY")
@@ -164,7 +163,6 @@ else:
     AWS_STORAGE_BUCKET_NAME = os.environ.get("S3_SUPABASE_BUCKET_NAME")
     AWS_S3_REGION_NAME = os.environ.get("S3_SUPABASE_REGION_NAME")
     
-    # DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 
     STORAGES = {
         "default": {
@@ -186,4 +184,4 @@ else:
         },
     }
 
-    MEDIA_URL = f"{SUPABASE_PROJ_URL}/storage/v1/object/public/{AWS_STORAGE_BUCKET_NAME}/"
+    MEDIA_URL = f"{AWS_S3_ENDPOINT_URL}/storage/v1/object/public/{AWS_STORAGE_BUCKET_NAME}/"
