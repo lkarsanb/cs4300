@@ -159,17 +159,19 @@ else:
     SUPABASE_PROJ_URL = os.environ.get("SUPABASE_URL")
     SUPABASE_BUCKET_NAME = os.environ.get("S3_SUPABASE_BUCKET_NAME")
 
+    # DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+
     STORAGES = {
         "default": {
             "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
             "OPTIONS": {
-                "aws_access_key": os.environ.get("S3_SUPABASE_ACCESS_KEY"),
+                "aws_access_key_id": os.environ.get("S3_SUPABASE_ACCESS_KEY"),
                 "aws_secret_access_key": os.environ.get("S3_SUPABASE_SECRET_ACCESS_KEY"),
-                "bucket_name": SUPABASE_BUCKET_NAME,
-                "region_name": os.environ.get("S3_SUPABASE_REGION_NAME"),
+                # "bucket_name": SUPABASE_BUCKET_NAME,
+                "region": os.environ.get("S3_SUPABASE_REGION_NAME"),
                 "endpoint_url": os.environ.get("S3_SUPABASE_ENDPOINT_URL"),
-                "default_acl": None,
-                "querystring_auth": False,
+                # "default_acl": None,
+                # "querystring_auth": False,
             }
         },
         # Static files still stored in render through Whitenoise.
