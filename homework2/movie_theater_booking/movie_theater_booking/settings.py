@@ -144,7 +144,6 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 if not DEBUG:
     STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-    STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -167,7 +166,12 @@ else:
     STORAGES = {
         "default": {
             "BACKEND": "django_supabase_storage.SupabaseMediaStorage"
-        }
+        },
+
+        # Static files still stored in render through Whitenoise.
+        "staticfiles": {
+            "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage"
+        },
     }
 
     SUPABASE_MEDIA_BUCKET = "media"
