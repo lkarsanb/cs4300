@@ -186,4 +186,4 @@ else:
         },
     }
 
-    MEDIA_URL = f"{SUPABASE_PROJ_URL}/storage/v1/object/public/{SUPABASE_BUCKET_NAME}/"
+    MEDIA_URL = f"{SUPABASE_PROJ_URL}/storage/v1/object/public/{AWS_STORAGE_BUCKET_NAME}/"
