@@ -153,8 +153,36 @@ if DEBUG:
     MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 else:
-    # Use supabase to store poster images.
+    # INSTALLED_APPS += ["storages"]
+
     SUPABASE_URL = os.environ.get("SUPABASE_URL")
+    # AWS_S3_ENDPOINT_URL = os.environ.get("S3_SUPABASE_ENDPOINT_URL")
+    # AWS_S3_ACCESS_KEY_ID = os.environ.get("S3_SUPABASE_ACCESS_KEY")
+    # AWS_S3_SECRET_ACCESS_KEY = os.environ.get("S3_SUPABASE_SECRET_ACCESS_KEY")
     AWS_STORAGE_BUCKET_NAME = os.environ.get("S3_SUPABASE_BUCKET_NAME")
+    # AWS_S3_REGION_NAME = os.environ.get("S3_SUPABASE_REGION_NAME")
+    # AWS_S3_FILE_OVERWRITE = False
+    # AWS_QUERYSTRING_AUTH = False
+    # AWS_DEFAULT_ACL = None
+
+    # STORAGES = {
+    #     "default": {
+    #         "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
+    #         "OPTIONS": {
+    #             "access_key": AWS_S3_ACCESS_KEY_ID,
+    #             "secret_key": AWS_S3_SECRET_ACCESS_KEY,
+    #             "bucket_name": AWS_STORAGE_BUCKET_NAME,
+    #             "region_name": AWS_S3_REGION_NAME,
+    #             "endpoint_url": AWS_S3_ENDPOINT_URL,
+    #             "default_acl": AWS_DEFAULT_ACL,
+    #             "querystring_auth": AWS_QUERYSTRING_AUTH,
+    #             "file_overwrite": AWS_S3_FILE_OVERWRITE,
+    #         }
+    #     },
+    #     # Static files still stored in render through Whitenoise.
+    #     "staticfiles": {
+    #         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage"
+    #     },
+    # }
 
     MEDIA_URL = f"{SUPABASE_URL}/storage/v1/object/public/{AWS_STORAGE_BUCKET_NAME}/"
