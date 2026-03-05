@@ -19,8 +19,9 @@ SECRET_KEY = os.environ.get(
 # Note: Due to the use of images in the assignment and render not allowing for these to be stored,
 # I left DEBUG as True, though in a production environment, I would use the following line to set
 # the DEBUG variable.
-#DEBUG = "RENDER" not in os.environ
-DEBUG = True
+
+DEBUG = "RENDER" not in os.environ
+# DEBUG = True
 ALLOWED_HOSTS = [
     "app-lkarsanb-21.devedu.io",
     "cs4300-movie-booking-9hci.onrender.com",
@@ -139,10 +140,11 @@ USE_TZ = True
 # Static images for the design of the website.
 STATIC_URL = "/static/"
 
-if DEBUG:
-    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+if not DEBUG:
     STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-else:
     STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Default primary key field type
@@ -155,5 +157,20 @@ LOGIN_REDIRECT_URL = "home"
 LOGOUT_REDIRECT_URL = "home"
 
 # Media for movie posters that are uploaded by admin.
-MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+if DEBUG:
+    MEDIA_URL = "/media/"
+    MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+else:
+    # Using Supabase to store media files.
+    SUPABASE_URL = os.getenv("SUPABASE_URL")
+    SUPABASE_KEY = os.getenv("SUPABASE_KEY")
+
+    STORAGES = {
+        "default": {
+            "BACKEND": "django_supabase_storage.SupabaseMediaStorage"
+        }
+    }
+
+    SUPABASE_MEDIA_BUCKET = "media"
+    MEDIA_URL = f"{SUPABASE_URL}/storage/v1/object/public/{SUPABASE_MEDIA_BUCKET}/"
