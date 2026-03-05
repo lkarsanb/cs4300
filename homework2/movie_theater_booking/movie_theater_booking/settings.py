@@ -140,7 +140,6 @@ USE_TZ = True
 # Static images for the design of the website.
 STATIC_URL = "/static/"
 
-
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 if not DEBUG:
@@ -151,7 +150,6 @@ if not DEBUG:
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
 
 LOGIN_REDIRECT_URL = "home"
 LOGOUT_REDIRECT_URL = "home"
