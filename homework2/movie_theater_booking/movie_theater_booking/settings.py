@@ -174,5 +174,5 @@ else:
         },
     }
 
-    SUPABASE_MEDIA_BUCKET = "media/movie_covers/"
+    SUPABASE_MEDIA_BUCKET = "media"
     MEDIA_URL = f"{SUPABASE_URL}/storage/v1/object/public/{SUPABASE_MEDIA_BUCKET}/"
