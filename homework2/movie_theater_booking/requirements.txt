@@ -32,6 +32,7 @@ executing==2.2.1
 fastjsonschema==2.21.2
 fsspec==2026.2.0
 gunicorn==25.1.0
+gyp==0.1
 h11==0.16.0
 h2==4.3.0
 hpack==4.1.0
