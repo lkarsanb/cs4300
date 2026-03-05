@@ -163,7 +163,11 @@ else:
     STORAGES = {
         "default": {
             "BACKEND": "django_supabase_storage.SupabaseMediaStorage",
-            "OPTIONS": {"bucket_name": SUPABASE_MEDIA_BUCKET}
+            "OPTIONS": {
+                "bucket_name": SUPABASE_MEDIA_BUCKET,
+                "supabase_url": SUPABASE_URL,
+                "supabase_key": SUPABASE_KEY,
+            }
         },
         # Static files still stored in render through Whitenoise.
         "staticfiles": {

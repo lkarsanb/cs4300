@@ -10,6 +10,7 @@
 
 
 {% if seats %}
+    <h1 class="text-center">Theater {{ seats.first.movie_location }}</h2>
     <div class="container text-center mt-5">
         <div class="screen bg-secondary text-white p-2 mb-5 rounded">SCREEN THIS WAY</div>
             {% for seat in seats %}
@@ -48,7 +49,7 @@
 
 
         <!-- Show what the color mean for clearer interface. -->
-        <div class="mt-5">
+        <div class="m-5">
             <span class="badge bg-success">Available</span>
             <span class="badge bg-danger ms-2">Booked</span>
         </div>
