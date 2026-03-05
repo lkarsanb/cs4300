@@ -184,4 +184,4 @@ else:
         },
     }
 
-    MEDIA_URL = f"{AWS_S3_ENDPOINT_URL}/storage/v1/object/public/{AWS_STORAGE_BUCKET_NAME}/"
+    MEDIA_URL = f"{os.environ.get("SUPABASE_URL")}/storage/v1/object/public/{AWS_STORAGE_BUCKET_NAME}/"
