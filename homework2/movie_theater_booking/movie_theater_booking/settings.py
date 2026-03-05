@@ -157,21 +157,27 @@ if DEBUG:
 else:
     INSTALLED_APPS += ["storages"]
     SUPABASE_PROJ_URL = os.environ.get("SUPABASE_URL")
-    SUPABASE_BUCKET_NAME = os.environ.get("S3_SUPABASE_BUCKET_NAME")
 
+    AWS_S3_ENDPOINT_URL = os.environ.get("S3_SUPABASE_ENDPOINT_URL")
+    AWS_ACCESS_KEY_ID = os.environ.get("S3_SUPABASE_ACCESS_KEY")
+    AWS_S3_SECRET_ACCESS_KEY = os.environ.get("S3_SUPABASE_SECRET_ACCESS_KEY")
+    AWS_STORAGE_BUCKET_NAME = os.environ.get("S3_SUPABASE_BUCKET_NAME")
+    AWS_S3_REGION_NAME = os.environ.get("S3_SUPABASE_REGION_NAME")
+    
     # DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 
     STORAGES = {
         "default": {
-            "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
+            "BACKEND": "storages.backends.s3.S3Storage"",
             "OPTIONS": {
-                "aws_access_key_id": os.environ.get("S3_SUPABASE_ACCESS_KEY"),
-                "aws_secret_access_key": os.environ.get("S3_SUPABASE_SECRET_ACCESS_KEY"),
-                # "bucket_name": SUPABASE_BUCKET_NAME,
-                "region": os.environ.get("S3_SUPABASE_REGION_NAME"),
-                "endpoint_url": os.environ.get("S3_SUPABASE_ENDPOINT_URL"),
-                # "default_acl": None,
-                # "querystring_auth": False,
+                "access_key": AWS_ACCESS_KEY_ID,
+                "secret_access": AWS_S3_SECRET_ACCESS_KEY,
+                "bucket_name": SUPABASE_BUCKET_NAME,
+                "region": AWS_S3_REGION_NAME,
+                "endpoint_url": AWS_S3_ENDPOINT_URL,
+                "default_acl": None,
+                "querystring_auth": False,
+                "file_overwrite": False,
             }
         },
         # Static files still stored in render through Whitenoise.
