@@ -5,8 +5,18 @@
 <div class="d-flex justify-content-center">
     <!-- Display any errors with form if needed. -->
     {% if form.errors %}
-        <div class="m-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
-            {{ form.errors }}
+        <div class="m-3 p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
+            {% for error in form.non_field_errors %}
+                {{ error }}
+                <br>
+            {% endfor %}
+            
+            {% for errorType in form %}
+                {% for error in errorType.errors %}
+                    {{ error }}
+                    <br>
+                {% endfor %}
+            {% endfor %}
         </div>
     {% endif %}
 </div>
