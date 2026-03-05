@@ -10,7 +10,7 @@
 
 
 {% if seats %}
-    <h1 class="text-center">Theater {{ seats.first.movie_location }}</h2>
+    <h1 class="text-center">Theater {{ seats.first.movie_location }}</h1>
     <div class="container text-center mt-5">
         <div class="screen bg-secondary text-white p-2 mb-5 rounded">SCREEN THIS WAY</div>
             {% for seat in seats %}
