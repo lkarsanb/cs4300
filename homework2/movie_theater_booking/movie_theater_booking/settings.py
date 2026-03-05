@@ -163,8 +163,8 @@ else:
         "default": {
             "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
             "OPTIONS": {
-                "access_key": os.environ.get("S3_SUPABASE_ACCESS_KEY"),
-                "secret_key": os.environ.get("S3_SUPABASE_SECRET_ACCESS_KEY"),
+                "aws_access_key": os.environ.get("S3_SUPABASE_ACCESS_KEY"),
+                "aws_secret_access_key": os.environ.get("S3_SUPABASE_SECRET_ACCESS_KEY"),
                 "bucket_name": SUPABASE_BUCKET_NAME,
                 "region_name": os.environ.get("S3_SUPABASE_REGION_NAME"),
                 "endpoint_url": os.environ.get("S3_SUPABASE_ENDPOINT_URL"),
