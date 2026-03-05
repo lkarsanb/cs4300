@@ -158,16 +158,17 @@ else:
     # Using Supabase to store media files.
     SUPABASE_URL = os.getenv("SUPABASE_URL")
     SUPABASE_KEY = os.getenv("SUPABASE_KEY")
-    SUPABASE_MEDIA_BUCKET = "media"
+    # SUPABASE_MEDIA_BUCKET = "media"
+    SUPABASE_ROOT_PATH = "/media/"
 
     STORAGES = {
         "default": {
             "BACKEND": "django_supabase_storage.SupabaseMediaStorage",
-            "OPTIONS": {
-                "bucket_name": SUPABASE_MEDIA_BUCKET,
-                "supabase_url": SUPABASE_URL,
-                "supabase_key": SUPABASE_KEY,
-            }
+            # "OPTIONS": {
+            #     "bucket_name": SUPABASE_MEDIA_BUCKET,
+            #     "supabase_url": SUPABASE_URL,
+            #     "supabase_key": SUPABASE_KEY
+            # }
         },
         # Static files still stored in render through Whitenoise.
         "staticfiles": {
