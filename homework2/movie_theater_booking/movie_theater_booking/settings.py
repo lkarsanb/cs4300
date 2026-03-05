@@ -21,6 +21,7 @@ DEBUG = "RENDER" not in os.environ
 ALLOWED_HOSTS = [
     "app-lkarsanb-21.devedu.io",
     "cs4300-movie-booking-9hci.onrender.com",
+    "127.0.0.1:8000"
 ]
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get("RENDER_EXTERNAL_HOSTNAME")
@@ -152,7 +153,7 @@ if DEBUG:
     MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 else:
-        # Use supabase to store poster images.
+    # Use supabase to store poster images.
     SUPABASE_URL = os.environ.get("SUPABASE_URL")
     AWS_STORAGE_BUCKET_NAME = os.environ.get("S3_SUPABASE_BUCKET_NAME")
 
