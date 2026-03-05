@@ -153,7 +153,7 @@ if DEBUG:
 
 else:
     INSTALLED_APPS += ["storages"]
-    
+
     SUPABASE_URL = os.environ.get("SUPABASE_URL")
     AWS_S3_ENDPOINT_URL = os.environ.get("S3_SUPABASE_ENDPOINT_URL")
     AWS_S3_ACCESS_KEY_ID = os.environ.get("S3_SUPABASE_ACCESS_KEY")
@@ -184,5 +184,4 @@ else:
         },
     }
 
-    DEFAULT_FILE_STORAGE = "default"
     MEDIA_URL = f"{SUPABASE_URL}/storage/v1/object/public/{AWS_STORAGE_BUCKET_NAME}/"
