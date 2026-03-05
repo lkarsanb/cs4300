@@ -12,7 +12,7 @@ In this project, I was able to interact with Python, Django, Django REST Framewo
 - Movies page which is the home page of the website that allows users to view all movies showing.
 - Movie times page which shows the dates and times the selected movie is available.
 - Seats page where users can see available seats and book a seat.
-- Bookings history page where users that are logged in are able to their bookings (past and future).
+- Bookings history page where users that are logged in are able to view their bookings (past and future).
 
 ## Supabase
 To store movie posters, I connected the project to Supabase in order to store and retrieve them in a storage bucket on supabase.
