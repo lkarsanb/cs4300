@@ -136,7 +136,7 @@ USE_TZ = True
 # Static images for the design of the website.
 STATIC_URL = "/static/"
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 if not DEBUG:
     STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
@@ -158,17 +158,17 @@ else:
     # Using Supabase to store media files.
     SUPABASE_URL = os.getenv("SUPABASE_URL")
     SUPABASE_KEY = os.getenv("SUPABASE_KEY")
+    SUPABASE_MEDIA_BUCKET = "media"
 
     STORAGES = {
         "default": {
-            "BACKEND": "django_supabase_storage.SupabaseMediaStorage"
+            "BACKEND": "django_supabase_storage.SupabaseMediaStorage",
+            "OPTIONS": {"bucket_name": SUPABASE_MEDIA_BUCKET}
         },
-
         # Static files still stored in render through Whitenoise.
         "staticfiles": {
             "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage"
         },
     }
 
-    SUPABASE_MEDIA_BUCKET = "media"
     MEDIA_URL = f"{SUPABASE_URL}/storage/v1/object/public/{SUPABASE_MEDIA_BUCKET}/"
