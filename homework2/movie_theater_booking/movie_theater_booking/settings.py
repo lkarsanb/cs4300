@@ -16,7 +16,7 @@ SECRET_KEY = os.environ.get(
 )
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     "app-lkarsanb-21.devedu.io",
@@ -155,24 +155,26 @@ else:
     INSTALLED_APPS += ["storages"]
 
     AWS_S3_ENDPOINT_URL = os.environ.get("S3_SUPABASE_ENDPOINT_URL")
-    AWS_ACCESS_KEY_ID = os.environ.get("S3_SUPABASE_ACCESS_KEY")
+    AWS_S3_ACCESS_KEY_ID = os.environ.get("S3_SUPABASE_ACCESS_KEY")
     AWS_S3_SECRET_ACCESS_KEY = os.environ.get("S3_SUPABASE_SECRET_ACCESS_KEY")
     AWS_STORAGE_BUCKET_NAME = os.environ.get("S3_SUPABASE_BUCKET_NAME")
     AWS_S3_REGION_NAME = os.environ.get("S3_SUPABASE_REGION_NAME")
-    
+    AWS_S3_FILE_OVERWRITE = False
+    AWS_QUERYSTRING_AUTH = False
+    AWS_DEFAULT_ACL = None
 
     STORAGES = {
         "default": {
             "BACKEND": "storages.backends.s3.S3Storage",
             "OPTIONS": {
-                "access_key": AWS_ACCESS_KEY_ID,
+                "access_key": AWS_S3_ACCESS_KEY_ID,
                 "secret_key": AWS_S3_SECRET_ACCESS_KEY,
                 "bucket_name": AWS_STORAGE_BUCKET_NAME,
                 "region_name": AWS_S3_REGION_NAME,
                 "endpoint_url": AWS_S3_ENDPOINT_URL,
-                "default_acl": None,
-                "querystring_auth": False,
-                "file_overwrite": False,
+                "default_acl": AWS_DEFAULT_ACL,
+                "querystring_auth": AWS_QUERYSTRING_AUTH,
+                "file_overwrite": AWS_S3_FILE_OVERWRITE,
             }
         },
         # Static files still stored in render through Whitenoise.
@@ -181,4 +183,4 @@ else:
         },
     }
 
-    MEDIA_URL = f"{os.environ.get("SUPABASE_URL")}/storage/v1/object/public/{AWS_STORAGE_BUCKET_NAME}/"
+    MEDIA_URL = f"{os.environ.get('SUPABASE_URL')}/storage/v1/object/public/{AWS_STORAGE_BUCKET_NAME}/"
