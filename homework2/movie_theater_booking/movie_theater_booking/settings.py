@@ -159,7 +159,7 @@ else:
     SUPABASE_PROJ_URL = os.environ.get("SUPABASE_URL")
     SUPABASE_BUCKET_NAME = os.environ.get("S3_SUPABASE_BUCKET_NAME")
 
-    # DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+    DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 
     STORAGES = {
         "default": {
