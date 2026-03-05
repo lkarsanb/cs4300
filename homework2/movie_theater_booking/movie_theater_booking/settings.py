@@ -21,7 +21,7 @@ SECRET_KEY = os.environ.get(
 # the DEBUG variable.
 
 DEBUG = "RENDER" not in os.environ
-# DEBUG = True
+
 ALLOWED_HOSTS = [
     "app-lkarsanb-21.devedu.io",
     "cs4300-movie-booking-9hci.onrender.com",

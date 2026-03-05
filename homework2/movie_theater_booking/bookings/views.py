@@ -74,7 +74,7 @@ def movie_time_html(request, movie_id):
         dates[date] = sorted(dates[date])
     sort_dates = dict(sorted(dates.items()))
 
-    return render(request, "bookings/movie_time.html", {"movie": movie, "dates": dates})
+    return render(request, "bookings/movie_time.html", {"movie": movie, "dates": sort_dates})
 
 
 def seat_booking_html(request, movie_id):
