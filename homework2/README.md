@@ -122,7 +122,7 @@ python manage.py runserver
 Render is used to deploy this project as https://cs4300-movie-booking-9hci.onrender.com/
 
 ## Testing 
-This project was tested with unit tests, integration tests, and behavior driven tests.
+This project was tested with unit tests, integration tests, and behavior driven tests. Note that for all tests to pass, python version 3.12.3 is required. 
 
 ### For unit and integration testing:
 #### 1) Ensure you are in the directory where manage.py is located. Then use:
