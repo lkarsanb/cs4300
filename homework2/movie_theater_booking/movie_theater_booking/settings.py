@@ -154,7 +154,7 @@ if DEBUG:
 else:
     # INSTALLED_APPS += ["storages"]
 
-    # SUPABASE_URL = os.environ.get("SUPABASE_URL")
+    SUPABASE_URL = os.environ.get("SUPABASE_URL")
     # AWS_S3_ENDPOINT_URL = os.environ.get("S3_SUPABASE_ENDPOINT_URL")
     # AWS_S3_ACCESS_KEY_ID = os.environ.get("S3_SUPABASE_ACCESS_KEY")
     # AWS_S3_SECRET_ACCESS_KEY = os.environ.get("S3_SUPABASE_SECRET_ACCESS_KEY")
