@@ -1,7 +1,7 @@
 # Homework 2
 
 ### Overview of Project
-In this project, I was able to interact with Python, Django, Django REST Framework, Bootstrap, and render to create a movie booking website. Users are able to view movies that are playing, book seats, and view previous bookings.
+In this project, I was able to interact with Python, Django, Django REST Framework, Bootstrap, Supabase, and Render to create a movie booking website. Users are able to view movies that are playing, book seats, and view previous bookings.
 
 ## API EndPoints
 - /api/movies/
@@ -11,8 +11,11 @@ In this project, I was able to interact with Python, Django, Django REST Framewo
 ## Website Design
 - Movies page which is the home page of the website that allows users to view all movies showing.
 - Movie times page which shows the dates and times the selected movie is available.
-- Seats page where uses can see available seets and book a seat.
-- Bookings history page where users that are logged in are able to their bookings (past and future).
+- Seats page where users can see available seats and book a seat.
+- Bookings history page where users that are logged in are able to view their bookings (past and future).
+
+## Supabase
+To store movie posters, I connected the project to Supabase in order to store and retrieve them in a storage bucket on Supabase.
 
 ### Project Structure
 ```text
@@ -149,7 +152,7 @@ python manage.py behave <optional path to certain .feature file>
 
 
 ## AI Usage
-Artificial Intelligence (AI) was used in this project in various aspects. ChatGPT was used to help plan how to work on the project as well as with understanding how the backend of the application should work. From there, I was able to refer to the documentation to better see how to implement the concepts. ChatGPT was also used for testing and to help identify any missing edge cases as well as to help debug. Futhermore, in order to get the descriptions for the movies that are stored in the database, I used ChatGPT to generate the descriptions.
+Artificial Intelligence (AI) was used in this project in various aspects. ChatGPT was used to help plan how to work on the project as well as with understanding how the backend of the application should work. From there, I was able to refer to the documentation to better see how to implement the concepts. ChatGPT was also used for testing and to help identify any missing edge cases as well as to help debug. Furthermore, in order to get the descriptions for the movies that are stored in the database, I used ChatGPT to generate the descriptions.
 
 In addition to this, the logo that is used on the webpage was created by Gemini.
 
