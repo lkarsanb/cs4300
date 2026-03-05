@@ -15,7 +15,7 @@ In this project, I was able to interact with Python, Django, Django REST Framewo
 - Bookings history page where users that are logged in are able to view their bookings (past and future).
 
 ## Supabase
-To store movie posters, I connected the project to Supabase in order to store and retrieve them in a storage bucket on supabase.
+To store movie posters, I connected the project to Supabase in order to store and retrieve them in a storage bucket on Supabase.
 
 ### Project Structure
 ```text
