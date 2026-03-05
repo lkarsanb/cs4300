@@ -1,0 +1,8697 @@
+[
+{
+  "model": "bookings.movie",
+  "pk": 1,
+  "fields": {
+    "title": "Black Panther",
+    "description": "In the heart of Africa lies the hidden, technologically advanced nation of Wakanda. When King T'Challa's father dies, he must step into his role as the new Black Panther. As T'Challa grapples with his responsibilities and leadership, he faces a dangerous challenge from Erik Killmonger, a vengeful outsider who seeks to take the throne. Filled with stunning action, powerful themes of identity, legacy, and justice, Black Panther delivers a cinematic experience that celebrates culture and courage.",
+    "release_date": "2026-05-20",
+    "duration": 135,
+    "image": "movie_covers/Black_Panther.jpg"
+  }
+},
+{
+  "model": "bookings.movie",
+  "pk": 2,
+  "fields": {
+    "title": "Avengers: Endgame",
+    "description": "After the devastating events of Avengers: Infinity War, the remaining Avengers and their allies must come together for one final mission: to undo the chaos caused by Thanos. With the universe at stake, the team embarks on a daring plan to collect the Infinity Stones from different points in time. Avengers: Endgame is a heart-pounding, emotional conclusion to the Infinity Saga, bringing together unforgettable characters, epic battles, and powerful moments of sacrifice and heroism.",
+    "release_date": "2026-05-22",
+    "duration": 181,
+    "image": "movie_covers/Avengers_Endgame.jpg"
+  }
+},
+{
+  "model": "bookings.movie",
+  "pk": 3,
+  "fields": {
+    "title": "The Amazing Spider-Man",
+    "description": "In The Amazing Spider-Man, we follow the journey of Peter Parker, a teenager grappling with the mystery of his parents' disappearance and newfound powers. After being bitten by a radioactive spider, Peter transforms into Spider-Man, gaining incredible abilities. As he navigates the challenges of being a superhero, Peter faces the villainous Dr. Curt Connors, whose transformation into the Lizard threatens the city. A fresh take on the iconic hero, this film explores themes of responsibility, loss, and the power of self-discovery.",
+    "release_date": "2026-05-21",
+    "duration": 236,
+    "image": "movie_covers/The_Amazing_Spider_Man.jpg"
+  }
+},
+{
+  "model": "bookings.movie",
+  "pk": 4,
+  "fields": {
+    "title": "Spider-Man: Homecoming",
+    "description": "After his unforgettable battle with the Avengers, 15-year-old Peter Parker is eager to prove himself as a true hero. Juggling high school life with his secret identity as Spider-Man, Peter faces his biggest challenge yet: the menacing Vulture, a dangerous criminal who threatens his city. As Peter strives to balance his life as a teenager and a superhero, he learns valuable lessons about responsibility, trust, and what it truly means to be a hero. Spider-Man: Homecoming delivers a fun, youthful take on the beloved web-slinger.",
+    "release_date": "2026-05-21",
+    "duration": 133,
+    "image": "movie_covers/Spider_Man_Homecoming.jpg"
+  }
+},
+{
+  "model": "bookings.movie",
+  "pk": 5,
+  "fields": {
+    "title": "Spider-Man: Into the Spider-Verse",
+    "description": "Spider-Man: Into the Spider-Verse introduces Miles Morales, a teenager from Brooklyn who is bitten by a radioactive spider, gaining spider-like abilities. When a multiverse collision causes different versions of Spider-Man to emerge, Miles must team up with these unique heroes—including the iconic Peter B. Parker, Spider-Gwen, and more—to stop the villainous Kingpin from destroying all realities. With stunning animation, heart-pounding action, and a story about embracing one's destiny, Into the Spider-Verse is a visually groundbreaking and emotionally charged adventure for all ages.",
+    "release_date": "2026-05-23",
+    "duration": 116,
+    "image": "movie_covers/Spider_Man_Spider_Verse.jpg"
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 1,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 2,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "A",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 3,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 4,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "A",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 6,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "A",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 7,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 8,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "A",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 9,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 10,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "A",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 11,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "A",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 12,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "A",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 13,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "A",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 14,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "A",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 15,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "A",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 16,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "A",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 17,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "A",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 18,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 20,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 21,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "A",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 22,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 23,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 24,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 25,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 26,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 27,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 28,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 29,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 30,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 31,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 32,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 33,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 34,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 35,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 36,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 37,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 38,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 39,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 40,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 41,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 42,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 43,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 44,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 45,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 46,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 47,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 48,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 49,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 50,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 51,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 52,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 53,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 54,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 55,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 56,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 57,
+  "fields": {
+    "movie": 5,
+    "movie_location": 3,
+    "movie_time": "2026-05-25T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 58,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "A",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 59,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "A",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 60,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "A",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 61,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "A",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 62,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "A",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 63,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "B",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 64,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "B",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 65,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "B",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 66,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "B",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 67,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "B",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 68,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "B",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 69,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "C",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 70,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "C",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 71,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "C",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 72,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "C",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 73,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "C",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 74,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "C",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 75,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "D",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 76,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "D",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 77,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "D",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 78,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "D",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 79,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "D",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 80,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "D",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 81,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "E",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 82,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "E",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 83,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "E",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 84,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "E",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 85,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "E",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 86,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "E",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 87,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "F",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 88,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "F",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 89,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "F",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 90,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "F",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 91,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "F",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 92,
+  "fields": {
+    "movie": 5,
+    "movie_location": 4,
+    "movie_time": "2026-05-24T17:00:00Z",
+    "seat_row": "F",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 93,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 94,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 95,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 96,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 97,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 98,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 99,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 100,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 101,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 102,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 103,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 104,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 105,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 106,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 107,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 108,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 109,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 110,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 111,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 112,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 113,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 114,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 115,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 116,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 117,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 118,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 119,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 120,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 121,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 122,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 123,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 124,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 125,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 126,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 127,
+  "fields": {
+    "movie": 5,
+    "movie_location": 5,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 128,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 129,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 130,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 131,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 132,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 133,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 134,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 135,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 136,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 137,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 138,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 139,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 140,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 141,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 142,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 143,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 144,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 145,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 146,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 147,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 148,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 149,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 150,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 151,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 152,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 153,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 154,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 155,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 156,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 157,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 158,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 159,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 160,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 161,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 162,
+  "fields": {
+    "movie": 5,
+    "movie_location": 2,
+    "movie_time": "2026-05-24T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 163,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "A",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 164,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "A",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 165,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "A",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 166,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "A",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 167,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "A",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 168,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "B",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 169,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "B",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 170,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "B",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 171,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "B",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 172,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "B",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 173,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "B",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 174,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "C",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 175,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "C",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 176,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "C",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 177,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "C",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 178,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "C",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 179,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "C",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 180,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "D",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 181,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "D",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 182,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "D",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 183,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "D",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 184,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "D",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 185,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "D",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 186,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "E",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 187,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "E",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 188,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "E",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 189,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "E",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 190,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "E",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 191,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "E",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 192,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "F",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 193,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "F",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 194,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "F",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 195,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "F",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 196,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "F",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 197,
+  "fields": {
+    "movie": 4,
+    "movie_location": 1,
+    "movie_time": "2026-05-24T09:00:00Z",
+    "seat_row": "F",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 198,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "A",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 199,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "A",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 200,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "A",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 201,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "A",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 202,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "A",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 203,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "B",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 204,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "B",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 205,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "B",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 206,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "B",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 207,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "B",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 208,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "B",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 209,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "C",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 210,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "C",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 211,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "C",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 212,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "C",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 213,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "C",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 214,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "C",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 215,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "D",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 216,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "D",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 217,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "D",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 218,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "D",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 219,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "D",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 220,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "D",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 221,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "E",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 222,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "E",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 223,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "E",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 224,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "E",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 225,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "E",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 226,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "E",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 227,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "F",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 228,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "F",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 229,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "F",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 230,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "F",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 231,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "F",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 232,
+  "fields": {
+    "movie": 4,
+    "movie_location": 3,
+    "movie_time": "2026-05-23T16:00:00Z",
+    "seat_row": "F",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 233,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "A",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 234,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "A",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 235,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "A",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 236,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "A",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 237,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "A",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 238,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "B",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 239,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "B",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 240,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "B",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 241,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "B",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 242,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "B",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 243,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "B",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 244,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "C",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 245,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "C",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 246,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "C",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 247,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "C",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 248,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "C",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 249,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "C",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 250,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "D",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 251,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "D",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 252,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "D",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 253,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "D",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 254,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "D",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 255,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "D",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 256,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "E",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 257,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "E",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 258,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "E",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 259,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "E",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 260,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "E",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 261,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "E",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 262,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "F",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 263,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "F",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 264,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "F",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 265,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "F",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 266,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "F",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 267,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-22T13:00:00Z",
+    "seat_row": "F",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 268,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "A",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 269,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "A",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 270,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "A",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 271,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "A",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 272,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "A",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 273,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "B",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 274,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "B",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 275,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "B",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 276,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "B",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 277,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "B",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 278,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "B",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 279,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "C",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 280,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "C",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 281,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "C",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 282,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "C",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 283,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "C",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 284,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "C",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 285,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "D",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 286,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "D",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 287,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "D",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 288,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "D",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 289,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "D",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 290,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "D",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 291,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "E",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 292,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "E",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 293,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "E",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 294,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "E",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 295,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "E",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 296,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "E",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 297,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "F",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 298,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "F",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 299,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "F",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 300,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "F",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 301,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "F",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 302,
+  "fields": {
+    "movie": 4,
+    "movie_location": 4,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "F",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 303,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "A",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 304,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "A",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 305,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "A",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 306,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "A",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 307,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "A",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 308,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "B",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 309,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "B",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 310,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "B",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 311,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "B",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 312,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "B",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 313,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "B",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 314,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "C",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 315,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "C",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 316,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "C",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 317,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "C",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 318,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "C",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 319,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "C",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 320,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "D",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 321,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "D",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 322,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "D",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 323,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "D",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 324,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "D",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 325,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "D",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 326,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "E",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 327,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "E",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 328,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "E",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 329,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "E",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 330,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "E",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 331,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "E",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 332,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "F",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 333,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "F",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 334,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "F",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 335,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "F",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 336,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "F",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 337,
+  "fields": {
+    "movie": 3,
+    "movie_location": 1,
+    "movie_time": "2026-05-23T12:00:00Z",
+    "seat_row": "F",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 338,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "A",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 339,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "A",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 340,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "A",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 341,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "A",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 342,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "A",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 343,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "B",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 344,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "B",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 345,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "B",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 346,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "B",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 347,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "B",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 348,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "B",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 349,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "C",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 350,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "C",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 351,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "C",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 352,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "C",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 353,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "C",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 354,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "C",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 355,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "D",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 356,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "D",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 357,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "D",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 358,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "D",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 359,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "D",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 360,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "D",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 361,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "E",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 362,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "E",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 363,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "E",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 364,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "E",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 365,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "E",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 366,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "E",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 367,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "F",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 368,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "F",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 369,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "F",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 370,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "F",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 371,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "F",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 372,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "F",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 373,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "A",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 374,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "A",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 375,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "A",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 376,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "A",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 377,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "A",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 378,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "B",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 379,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "B",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 380,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "B",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 381,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "B",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 382,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "B",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 383,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "B",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 384,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "C",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 385,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "C",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 386,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "C",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 387,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "C",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 388,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "C",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 389,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "C",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 390,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "D",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 391,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "D",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 392,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "D",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 393,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "D",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 394,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "D",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 395,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "D",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 396,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "E",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 397,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "E",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 398,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "E",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 399,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "E",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 400,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "E",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 401,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "E",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 402,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "F",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 403,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "F",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 404,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "F",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 405,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "F",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 406,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "F",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 407,
+  "fields": {
+    "movie": 3,
+    "movie_location": 3,
+    "movie_time": "2026-05-21T13:00:00Z",
+    "seat_row": "F",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 408,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "A",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 409,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "A",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 410,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "A",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 411,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "A",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 412,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "A",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 413,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "B",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 414,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "B",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 415,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "B",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 416,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "B",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 417,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "B",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 418,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "B",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 419,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "C",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 420,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "C",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 421,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "C",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 422,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "C",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 423,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "C",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 424,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "C",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 425,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "D",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 426,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "D",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 427,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "D",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 428,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "D",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 429,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "D",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 430,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "D",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 431,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "E",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 432,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "E",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 433,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "E",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 434,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "E",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 435,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "E",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 436,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "E",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 437,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "F",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 438,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "F",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 439,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "F",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 440,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "F",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 441,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "F",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 442,
+  "fields": {
+    "movie": 3,
+    "movie_location": 2,
+    "movie_time": "2026-05-21T09:00:00Z",
+    "seat_row": "F",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 443,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 444,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 445,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 446,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 447,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 448,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 449,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 450,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 451,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 452,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 453,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 454,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 455,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 456,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 457,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 458,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 459,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 460,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 461,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 462,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 463,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 464,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 465,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 466,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 467,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 468,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 469,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 470,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 471,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 472,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 473,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 474,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 475,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 476,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 477,
+  "fields": {
+    "movie": 2,
+    "movie_location": 5,
+    "movie_time": "2026-05-23T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 478,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "A",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 479,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "A",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 480,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "A",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 481,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "A",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 482,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "A",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 483,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "B",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 484,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "B",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 485,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "B",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 486,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "B",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 487,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "B",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 488,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "B",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 489,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "C",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 490,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "C",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 491,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "C",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 492,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "C",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 493,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "C",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 494,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "C",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 495,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "D",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 496,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "D",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 497,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "D",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 498,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "D",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 499,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "D",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 500,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "D",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 501,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "E",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 502,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "E",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 503,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "E",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 504,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "E",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 505,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "E",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 506,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "E",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 507,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "F",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 508,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "F",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 509,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "F",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 510,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "F",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 511,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "F",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 512,
+  "fields": {
+    "movie": 2,
+    "movie_location": 2,
+    "movie_time": "2026-05-23T09:00:00Z",
+    "seat_row": "F",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 513,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 514,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 515,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 516,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 517,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 518,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 519,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 520,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 521,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 522,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 523,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 524,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 525,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 526,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 527,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 528,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 529,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 530,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 531,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 532,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 533,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 534,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 535,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 536,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 537,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 538,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 539,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 540,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 541,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 542,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 543,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 544,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 545,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 546,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 547,
+  "fields": {
+    "movie": 2,
+    "movie_location": 3,
+    "movie_time": "2026-05-22T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 548,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "A",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 549,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "A",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 550,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "A",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 551,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "A",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 552,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "A",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 553,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "B",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 554,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "B",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 555,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "B",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 556,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "B",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 557,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "B",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 558,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "B",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 559,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "C",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 560,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "C",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 561,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "C",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 562,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "C",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 563,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "C",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 564,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "C",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 565,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "D",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 566,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "D",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 567,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "D",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 568,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "D",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 569,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "D",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 570,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "D",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 571,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "E",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 572,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "E",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 573,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "E",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 574,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "E",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 575,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "E",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 576,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "E",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 577,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "F",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 578,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "F",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 579,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "F",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 580,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "F",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 581,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "F",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 582,
+  "fields": {
+    "movie": 2,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T09:00:00Z",
+    "seat_row": "F",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 583,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "A",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 584,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "A",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 585,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "A",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 586,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "A",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 587,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "A",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 588,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "B",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 589,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "B",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 590,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "B",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 591,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "B",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 592,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "B",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 593,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "B",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 594,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "C",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 595,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "C",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 596,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "C",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 597,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "C",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 598,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "C",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 599,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "C",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 600,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "D",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 601,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "D",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 602,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "D",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 603,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "D",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 604,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "D",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 605,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "D",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 606,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "E",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 607,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "E",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 608,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "E",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 609,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "E",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 610,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "E",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 611,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "E",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 612,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "F",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 613,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "F",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 614,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "F",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 615,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "F",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 616,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "F",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 617,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-22T17:00:00Z",
+    "seat_row": "F",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 618,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 619,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 620,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 621,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 622,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 623,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 624,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 625,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 626,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 627,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 628,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 629,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 630,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 631,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 632,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 633,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 634,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 635,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 636,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 637,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 638,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 639,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 640,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 641,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 642,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 643,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 644,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 645,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 646,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 647,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 648,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 649,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 650,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 651,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 652,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-21T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 653,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "A",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 654,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "A",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 655,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "A",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 656,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "A",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 657,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "A",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 658,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "B",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 659,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "B",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 660,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "B",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 661,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "B",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 662,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "B",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 663,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "B",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 664,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "C",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 665,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "C",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 666,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "C",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 667,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "C",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 668,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "C",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 669,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "C",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 670,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "D",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 671,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "D",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 672,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "D",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 673,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "D",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 674,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "D",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 675,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "D",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 676,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "E",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 677,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "E",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 678,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "E",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 679,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "E",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 680,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "E",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 681,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "E",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 682,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "F",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 683,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "F",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 684,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "F",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 685,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "F",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 686,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "F",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 687,
+  "fields": {
+    "movie": 1,
+    "movie_location": 2,
+    "movie_time": "2026-05-20T17:00:00Z",
+    "seat_row": "F",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 688,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 689,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 690,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 691,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 692,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "A",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 693,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 694,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 695,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 696,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 697,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 698,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "B",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 699,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 700,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 701,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 702,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 703,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 704,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "C",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 705,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 706,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 707,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 708,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 709,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 710,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "D",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 711,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 712,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 713,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 714,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 715,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 716,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "E",
+    "seat_col": 6,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 717,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 1,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 718,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 2,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 719,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 3,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 720,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 4,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 721,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 5,
+    "is_booked": false
+  }
+},
+{
+  "model": "bookings.seat",
+  "pk": 722,
+  "fields": {
+    "movie": 1,
+    "movie_location": 1,
+    "movie_time": "2026-05-20T08:00:00Z",
+    "seat_row": "F",
+    "seat_col": 6,
+    "is_booked": false
+  }
+}
+]

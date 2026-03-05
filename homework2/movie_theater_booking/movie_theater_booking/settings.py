@@ -16,10 +16,6 @@ SECRET_KEY = os.environ.get(
 )
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# Note: Due to the use of images in the assignment and render not allowing for these to be stored,
-# I left DEBUG as True, though in a production environment, I would use the following line to set
-# the DEBUG variable.
-
 DEBUG = "RENDER" not in os.environ
 
 ALLOWED_HOSTS = [
