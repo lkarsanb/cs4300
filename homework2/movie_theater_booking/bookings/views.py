@@ -7,6 +7,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from rest_framework import viewsets, permissions
 from .models import Movie, Seat, Booking
 from .serializers import MovieSerializer, SeatSerializer, BookingSerializer
+from django.utils import timezone
 
 
 # Class based views for API.
@@ -126,6 +127,12 @@ def booking_history_html(request):
         bookings = Booking.objects.filter(user=request.user).order_by("-booking_date")
     else:
         bookings = []
+
+    # Check if the movie has already passed. If it has, cannot view anymore.
+    has_passed = {}
+    curr_time = timezone.now()
+    for booking in bookings:
+        booking.has_passed = (booking.seat.movie_time <= curr_time)
     return render(request, "bookings/booking_history.html", {"bookings": bookings})
 
 
