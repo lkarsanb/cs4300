@@ -74,8 +74,6 @@ build.sh
 python3 -m venv <name_of_virtual_environment> --system-site-packages
 source <name_of_virtual_environment>/bin/activate
 ```
-* Note: The project contains absolute paths in task6.py, task7.py, test_task6.py, and test_task7.py so these instructions are best suited for an environment in DevEdu.
-
 
 #### 2) Clone the repository,
 ```
