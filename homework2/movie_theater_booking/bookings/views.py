@@ -164,16 +164,22 @@ def cancel_booking_html(request, booking_id):
     :param booking_id: The id of the booking.
     :return: Deletes the booking and reloads bookings page.
     """
-    booking = get_object_or_404(Booking, id=booking_id, user=request.user)
+    if request.method == "POST":
+        booking = get_object_or_404(Booking, id=booking_id, user=request.user)
 
-    # Make seat available again.
-    booking.seat.is_booked = False
-    # Save the seat.
-    booking.seat.save()
+        # Make seat available again.
+        booking.seat.is_booked = False
+        # Save the seat.
+        booking.seat.save()
 
-    booking.delete()
+        booking.delete()
+        return redirect("booking_history")
+
+    messages.error(
+        request,
+        "Error occurred with deletion. Please try again.",
+    )
     return redirect("booking_history")
-
 
 def signup_html(request):
     """

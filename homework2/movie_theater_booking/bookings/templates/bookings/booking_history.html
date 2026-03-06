@@ -3,12 +3,10 @@
 
 {% block content %}
 
-<!-- Get current time to use to determine if delete booking should be available. -->
-{% load tz %}
-{% now "YmdHi" as curr_time %}
+<!-- Only display information if the user is authenticated. -->
 {% if user.is_authenticated %}
     {% if bookings %}
-        <table class="table">
+        <table class="table m-3">
             <thead>
                 <tr>
                     <th>Movie</th>
@@ -28,8 +26,8 @@
                         <td>
 
                         <!-- If the booking has not already passed, can cancel it.  -->
-                        {% if booking.seat.movie_time|date:"YmdHi" > curr_time %}
-                            <form action="{% url 'cancel_booking' booking.id %}">
+                        {% if not booking.has_passed %}
+                            <form action="{% url 'cancel_booking' booking.id %}" method="POST">
                                 {% csrf_token %}
                                 <button class="btn btn-sm btn-danger m-2" type="submit"
                                         onclick="return confirm('Are you sure you would like to delete this booking?');">
@@ -43,7 +41,7 @@
             </tbody>
         </table>
     {% else %}
-        <p>You have no previous bookings.</p>
+        <h3 class="m-3">You have no previous bookings.</h3>
     {% endif %}
 
 {% else %}

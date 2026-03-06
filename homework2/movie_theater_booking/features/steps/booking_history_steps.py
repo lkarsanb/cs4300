@@ -54,7 +54,7 @@ def step_impl(context):
 @then("I can delete the booking")
 def step_impl(context):
     url = reverse("cancel_booking", args=(context.booking.id,))
-    context.response = context.test.client.get(url, follow=True)
+    context.response = context.test.client.post(url, follow=True)
 
 
 @then('I should see "{movie}" in the list')
