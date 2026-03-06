@@ -129,7 +129,6 @@ def booking_history_html(request):
         bookings = []
 
     # Check if the movie has already passed. If it has, cannot view anymore.
-    has_passed = {}
     curr_time = timezone.now()
     for booking in bookings:
         booking.has_passed = (booking.seat.movie_time <= curr_time)
